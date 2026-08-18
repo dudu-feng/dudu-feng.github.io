@@ -1,446 +1,428 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>冯斌杰 | AI应用开发工程师</title>
-  <meta name="description" content="冯斌杰 — 2027届软件工程专业，专注AI智能体应用与全栈开发。Avalon智能体项目作者，技术栈覆盖 Python / Rust / Vue3 / React / TypeScript / Tauri。">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='88' font-weight='bold' fill='%236366f1'>F</text></svg>">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+SC:wght@300;400;500;700;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="冯斌杰 —— 软件工程 · 全栈开发者，专注于 AI Agent / AI 应用开发。开源智能体项目 Avalon 作者。" />
+  <meta name="author" content="冯斌杰" />
+  <meta property="og:title" content="冯斌杰 · 个人简历" />
+  <meta property="og:description" content="软件工程 · 全栈开发者，专注于 AI Agent / AI 应用开发。" />
+  <meta property="og:type" content="website" />
+  <title>冯斌杰 · 个人简历</title>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
-  <div class="bg-mesh"></div>
-  <div class="bg-grid"></div>
-
-  <!-- ==================== Navbar ==================== -->
-  <nav class="navbar" id="navbar">
-    <div class="nav-container">
-      <a href="#hero" class="nav-logo">
-        <span class="logo-bracket"></span>dudu-feng<span class="logo-bracket"></span>
+  <!-- ===== 顶部导航 ===== -->
+  <header class="site-header" id="site-header">
+    <nav class="nav container" aria-label="主导航">
+      <a class="nav-brand" href="#home" aria-label="回到顶部">
+        <span class="nav-brand__name">冯斌杰</span>
+        <span class="nav-brand__dot">.</span>
       </a>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#about" class="nav-link">关于</a></li>
-        <li><a href="#skills" class="nav-link">技能</a></li>
-        <li><a href="#projects" class="nav-link">项目</a></li>
-        <li><a href="#experience" class="nav-link">经历</a></li>
-        <li><a href="#awards" class="nav-link">荣誉</a></li>
-        <li><a href="#contact" class="nav-link">联系</a></li>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a class="nav-link" href="#about">关于</a></li>
+        <li><a class="nav-link" href="#skills">技能</a></li>
+        <li><a class="nav-link" href="#projects">项目</a></li>
+        <li><a class="nav-link" href="#experience">实习</a></li>
+        <li><a class="nav-link" href="#awards">比赛</a></li>
+        <li><a class="nav-link nav-link--cta" href="#contact">联系我</a></li>
       </ul>
-      <button class="nav-toggle" id="navToggle" aria-label="菜单">
-        <span></span><span></span><span></span>
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="打开菜单" aria-expanded="false">
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
       </button>
-    </div>
-  </nav>
+    </nav>
+  </header>
 
-  <!-- ==================== Hero ==================== -->
-  <section id="hero" class="hero">
-    <div class="hero-content">
-      <p class="hero-greeting">你好，我是</p>
-      <h1 class="hero-name">冯斌杰</h1>
-      <h2 class="hero-title"><span class="gradient-text">AI应用开发工程师</span></h2>
-      <p class="hero-desc">2027届软件工程 · 专注智能体应用与全栈开发</p>
-      <div class="hero-tags">
-        <span class="hero-tag">Python</span>
-        <span class="hero-tag">Vue3</span>
-        <span class="hero-tag">React</span>
-        <span class="hero-tag">TypeScript</span>
-        <span class="hero-tag">Rust</span>
-        <span class="hero-tag">Tauri</span>
-      </div>
-      <div class="hero-actions">
-        <a href="#projects" class="btn btn-primary">查看项目</a>
-        <a href="#contact" class="btn btn-outline">联系我</a>
-      </div>
-      <div class="hero-social">
-        <a href="https://github.com/dudu-feng" target="_blank" rel="noopener" class="social-link" aria-label="GitHub">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.515.12-3.15 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.635.24 2.85.12 3.15.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57C20.565 21.795 24 17.31 24 12c0-6.63-5.37-12-12-12z"/></svg>
-        </a>
-      </div>
-    </div>
-    <a href="#about" class="hero-scroll">
-      <span>向下滚动</span>
-      <div class="scroll-line"></div>
-    </a>
-  </section>
+  <main>
+    <!-- ===== 首屏 Hero ===== -->
+    <section class="hero" id="home">
+      <div class="container hero__inner">
+        <div class="hero__avatar-wrap">
+          <img class="hero__avatar" src="assets/fbj-类证件照自拍.jpg" alt="冯斌杰证件照" width="160" height="160" />
+        </div>
 
-  <!-- ==================== About ==================== -->
-  <section id="about" class="section">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-label">01</span>
-        <h2 class="section-title">关于我</h2>
-      </div>
-      <div class="about-grid">
-        <div class="about-text reveal">
-          <p>软件工程专业科班出身，具备扎实的计算机基础与工程能力。熟悉从需求分析到上线部署的完整开发流程，拥有全栈开发经验。</p>
-          <p>近两年聚焦 <strong>AI 智能体（Agent）应用开发</strong>，主导设计并开发了多端智能体项目 <strong>Avalon</strong>，覆盖 Web 端与桌面端，技术栈横跨 Python、Rust、Vue、React 与 TypeScript。</p>
-          <p>热衷将前沿 AI 能力落地到实际产品中，追求工程化与用户体验的平衡。</p>
-        </div>
-        <div class="about-info reveal">
-          <div class="info-item">
-            <span class="info-label">学校</span>
-            <span class="info-value">电子科技大学中山学院</span>
-          </div>
-          <div class="info-item">
-            <span class="info-label">学院</span>
-            <span class="info-value">计算机学院</span>
-          </div>
-          <div class="info-item">
-            <span class="info-label">专业</span>
-            <span class="info-value">软件工程</span>
-          </div>
-          <div class="info-item">
-            <span class="info-label">毕业</span>
-            <span class="info-value">2027届</span>
-          </div>
-          <div class="info-item">
-            <span class="info-label">方向</span>
-            <span class="info-value">AI应用 / Agent开发</span>
-          </div>
-          <div class="info-item">
-            <span class="info-label">所在地</span>
-            <span class="info-value">广东 · 中山</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+        <p class="hero__eyebrow">Hi，我是</p>
+        <h1 class="hero__name">冯斌杰</h1>
+        <p class="hero__en">Dudu Feng</p>
 
-  <!-- ==================== Skills ==================== -->
-  <section id="skills" class="section">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-label">02</span>
-        <h2 class="section-title">技术栈</h2>
-      </div>
-      <div class="skills-grid">
-        <div class="skill-card reveal">
-          <div class="skill-icon">AI</div>
-          <h3 class="skill-category">AI / Agent 开发</h3>
-          <div class="skill-tags">
-            <span class="tag">Python</span>
-            <span class="tag">LLM API 集成</span>
-            <span class="tag">智能体架构设计</span>
-            <span class="tag">提示词工程</span>
-            <span class="tag">RAG</span>
-          </div>
-        </div>
-        <div class="skill-card reveal">
-          <div class="skill-icon">FE</div>
-          <h3 class="skill-category">前端开发</h3>
-          <div class="skill-tags">
-            <span class="tag">Vue3</span>
-            <span class="tag">React</span>
-            <span class="tag">TypeScript</span>
-            <span class="tag">HTML5</span>
-            <span class="tag">CSS3</span>
-            <span class="tag">TailwindCSS</span>
-          </div>
-        </div>
-        <div class="skill-card reveal">
-          <div class="skill-icon">BE</div>
-          <h3 class="skill-category">后端开发</h3>
-          <div class="skill-tags">
-            <span class="tag">SpringBoot</span>
-            <span class="tag">Rust</span>
-            <span class="tag">Python FastAPI</span>
-            <span class="tag">RESTful API</span>
-            <span class="tag">MySQL</span>
-          </div>
-        </div>
-        <div class="skill-card reveal">
-          <div class="skill-icon">DT</div>
-          <h3 class="skill-category">桌面应用 & 工具链</h3>
-          <div class="skill-tags">
-            <span class="tag">Tauri</span>
-            <span class="tag">Git</span>
-            <span class="tag">Docker</span>
-            <span class="tag">Linux</span>
-            <span class="tag">GitHub Actions</span>
-            <span class="tag">CI/CD</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==================== Projects ==================== -->
-  <section id="projects" class="section">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-label">03</span>
-        <h2 class="section-title">项目作品</h2>
-      </div>
-      <div class="project-card reveal">
-        <div class="project-header">
-          <h3 class="project-name">Avalon</h3>
-          <span class="project-type">个人智能体项目</span>
-        </div>
-        <p class="project-desc">
-          多端智能体应用平台，提供跨平台一致的 AI 助手体验。项目同时维护 Web 端与桌面端两个版本，
-          后端统一使用 Python 构建，Web 端采用 Vue3 + TypeScript，桌面端采用 Tauri（Rust 后端 + React + TypeScript 前端）。
+        <p class="hero__title">
+          软件工程 · 全栈开发者<br class="hero__title-br" />
+          专注于 <span class="hero__title-accent">AI Agent / AI 应用开发</span>
         </p>
-        <div class="project-arch">
-          <div class="arch-item">
-            <span class="arch-label">后端</span>
-            <span class="arch-value">Python</span>
-          </div>
-          <div class="arch-item">
-            <span class="arch-label">Web 端</span>
-            <span class="arch-value">Vue3 + TypeScript</span>
-          </div>
-          <div class="arch-item">
-            <span class="arch-label">桌面端</span>
-            <span class="arch-value">Tauri (Rust + React + TS)</span>
-          </div>
-        </div>
-        <div class="project-tech">
-          <span class="tag tag-highlight">Python</span>
-          <span class="tag tag-highlight">Vue3</span>
-          <span class="tag tag-highlight">React</span>
-          <span class="tag tag-highlight">TypeScript</span>
-          <span class="tag tag-highlight">Rust</span>
-          <span class="tag tag-highlight">Tauri</span>
-        </div>
-        <div class="project-features">
-          <div class="feature-item">
-            <span class="feature-dot"></span>
-            <span>多端统一后端，一套 API 服务 Web 与桌面客户端</span>
-          </div>
-          <div class="feature-item">
-            <span class="feature-dot"></span>
-            <span>桌面端基于 Tauri，轻量高性能，Rust 后端保障安全与性能</span>
-          </div>
-          <div class="feature-item">
-            <span class="feature-dot"></span>
-            <span>前后端全 TypeScript 类型安全</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- ==================== Experience ==================== -->
-  <section id="experience" class="section">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-label">04</span>
-        <h2 class="section-title">经历</h2>
-      </div>
-      <div class="timeline">
-        <div class="timeline-item reveal">
-          <div class="timeline-marker"></div>
-          <div class="timeline-content glass-card">
-            <span class="timeline-period">2024.09 — 至今</span>
-            <h3 class="timeline-title">P2 助理工程师</h3>
-            <span class="timeline-org">软件系统与智能算法工作室 · 导师：张磊</span>
-            <p class="timeline-desc">通过 4 个月考核期获晋升认定。参与智能算法相关研发工作，持续深耕 AI 应用方向。</p>
-            <div class="timeline-img">
-              <img src="assets/实验室团队建设与颁奖-留影纪念.jpg" alt="实验室团队建设与颁奖" loading="lazy">
-            </div>
-          </div>
-        </div>
-        <div class="timeline-item reveal">
-          <div class="timeline-marker"></div>
-          <div class="timeline-content glass-card">
-            <span class="timeline-period">大二期间</span>
-            <h3 class="timeline-title">项目对接与实施</h3>
-            <span class="timeline-org">湖南弗斯迈（出差）</span>
-            <p class="timeline-desc">赴湖南弗斯迈现场参与项目对接与实施，负责需求沟通、系统部署与问题排查。</p>
-            <div class="timeline-img">
-              <img src="assets/湖南弗斯迈出差-项目对接与实施01.jpg" alt="项目对接与实施现场" loading="lazy">
-            </div>
-          </div>
-        </div>
-        <div class="timeline-item reveal">
-          <div class="timeline-marker"></div>
-          <div class="timeline-content glass-card">
-            <span class="timeline-period">大二暑期</span>
-            <h3 class="timeline-title">暑期实习</h3>
-            <span class="timeline-org">企业实习</span>
-            <p class="timeline-desc">参与企业级项目开发，积累实际工程经验，熟悉团队协作流程与项目管理规范。</p>
-            <div class="timeline-img">
-              <img src="assets/大二暑期实习-01.jpg" alt="暑期实习" loading="lazy">
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+        <p class="hero__desc">
+          科班出身、工程底子扎实 —— 从实验室企业级系统起步，在 AI 元年主动转向，
+          独立完成开源智能体项目 <a href="https://github.com/dudu-feng/Avalon" target="_blank" rel="noopener">Avalon</a>。
+        </p>
 
-  <!-- ==================== Awards ==================== -->
-  <section id="awards" class="section">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-label">05</span>
-        <h2 class="section-title">荣誉与获奖</h2>
-      </div>
-      <div class="awards-filter reveal">
-        <button class="filter-btn active" data-filter="all">全部</button>
-        <button class="filter-btn" data-filter="competition">竞赛</button>
-        <button class="filter-btn" data-filter="honor">荣誉</button>
-        <button class="filter-btn" data-filter="scholarship">奖学金</button>
-      </div>
-      <div class="awards-grid" id="awardsGrid">
-        <div class="award-card reveal" data-category="competition">
-          <div class="award-img"><img src="assets/2025海峡两岸广东省大学生创新作品赛-优秀奖.jpg" alt="海峡两岸创新作品赛 优秀奖" loading="lazy"></div>
-          <div class="award-info">
-            <span class="award-level">省级 · 优秀奖</span>
-            <h4 class="award-name">海峡两岸广东省大学生创新作品赛</h4>
-            <span class="award-date">2025</span>
-          </div>
-        </div>
-        <div class="award-card reveal" data-category="competition">
-          <div class="award-img"><img src="assets/2025计算机设计大赛-广东省三等奖.jpg" alt="计算机设计大赛 广东省三等奖" loading="lazy"></div>
-          <div class="award-info">
-            <span class="award-level">省级 · 三等奖</span>
-            <h4 class="award-name">中国大学生计算机设计大赛</h4>
-            <span class="award-date">2025</span>
-          </div>
-        </div>
-        <div class="award-card reveal" data-category="competition">
-          <div class="award-img"><img src="assets/2025大学生创新大赛-校级铜奖.jpg" alt="大学生创新大赛 校级铜奖" loading="lazy"></div>
-          <div class="award-info">
-            <span class="award-level">校级 · 铜奖</span>
-            <h4 class="award-name">大学生创新大赛</h4>
-            <span class="award-date">2025</span>
-          </div>
-        </div>
-        <div class="award-card reveal" data-category="competition">
-          <div class="award-img"><img src="assets/2025大学生创新大赛-院级一等奖.jpg" alt="大学生创新大赛 院级一等奖" loading="lazy"></div>
-          <div class="award-info">
-            <span class="award-level">院级 · 一等奖</span>
-            <h4 class="award-name">大学生创新大赛</h4>
-            <span class="award-date">2025</span>
-          </div>
-        </div>
-        <div class="award-card reveal" data-category="competition">
-          <div class="award-img"><img src="assets/2025大学生创新训练计划-校级立项.jpg" alt="大学生创新训练计划 校级立项" loading="lazy"></div>
-          <div class="award-info">
-            <span class="award-level">校级 · 立项</span>
-            <h4 class="award-name">大学生创新训练计划</h4>
-            <span class="award-date">2025</span>
-          </div>
-        </div>
-        <div class="award-card reveal" data-category="competition">
-          <div class="award-img"><img src="assets/粤港澳大湾区远光杯-二等奖.jpg" alt="远光杯 二等奖" loading="lazy"></div>
-          <div class="award-info">
-            <span class="award-level">区域赛 · 二等奖</span>
-            <h4 class="award-name">粤港澳大湾区"远光杯"</h4>
-            <span class="award-date">2025</span>
-          </div>
-        </div>
-        <div class="award-card reveal" data-category="competition">
-          <div class="award-img"><img src="assets/粤港澳大湾区远光杯-三等奖.jpg" alt="远光杯 三等奖" loading="lazy"></div>
-          <div class="award-info">
-            <span class="award-level">区域赛 · 三等奖</span>
-            <h4 class="award-name">粤港澳大湾区"远光杯"</h4>
-            <span class="award-date">2025</span>
-          </div>
-        </div>
-        <div class="award-card reveal" data-category="honor">
-          <div class="award-img"><img src="assets/2024实验室P2助理工程师晋升.jpg" alt="P2助理工程师晋升" loading="lazy"></div>
-          <div class="award-info">
-            <span class="award-level">职级晋升</span>
-            <h4 class="award-name">P2 助理工程师</h4>
-            <span class="award-date">2024</span>
-          </div>
-        </div>
-        <div class="award-card reveal" data-category="honor">
-          <div class="award-img"><img src='assets/新生辩论赛“最佳辩手”.jpg' alt="新生辩论赛最佳辩手" loading="lazy"></div>
-          <div class="award-info">
-            <span class="award-level">个人荣誉</span>
-            <h4 class="award-name">新生辩论赛"最佳辩手"</h4>
-            <span class="award-date">2023</span>
-          </div>
-        </div>
-        <div class="award-card reveal" data-category="honor">
-          <div class="award-img"><img src="assets/优秀班长-领奖.jpg" alt="优秀班长" loading="lazy"></div>
-          <div class="award-info">
-            <span class="award-level">连续两年</span>
-            <h4 class="award-name">优秀班长</h4>
-            <span class="award-date">大一 / 大二</span>
-          </div>
-        </div>
-        <div class="award-card reveal" data-category="honor">
-          <div class="award-img"><img src="assets/大一-优秀学生骨干.jpg" alt="优秀学生骨干" loading="lazy"></div>
-          <div class="award-info">
-            <span class="award-level">个人荣誉</span>
-            <h4 class="award-name">优秀学生骨干</h4>
-            <span class="award-date">大一</span>
-          </div>
-        </div>
-        <div class="award-card reveal" data-category="honor">
-          <div class="award-img"><img src="assets/大二-优秀共青团员.jpg" alt="优秀共青团员" loading="lazy"></div>
-          <div class="award-info">
-            <span class="award-level">个人荣誉</span>
-            <h4 class="award-name">优秀共青团员</h4>
-            <span class="award-date">大二</span>
-          </div>
-        </div>
-        <div class="award-card reveal" data-category="honor">
-          <div class="award-img"><img src="assets/大二-优秀四级帮扶.jpg" alt="优秀四级帮扶" loading="lazy"></div>
-          <div class="award-info">
-            <span class="award-level">个人荣誉</span>
-            <h4 class="award-name">优秀四级帮扶</h4>
-            <span class="award-date">大二</span>
-          </div>
-        </div>
-        <div class="award-card reveal" data-category="scholarship">
-          <div class="award-img"><img src="assets/大一-二等奖学金.jpg" alt="大一二等奖学金" loading="lazy"></div>
-          <div class="award-info">
-            <span class="award-level">二等奖学金</span>
-            <h4 class="award-name">学业奖学金</h4>
-            <span class="award-date">大一</span>
-          </div>
-        </div>
-        <div class="award-card reveal" data-category="scholarship">
-          <div class="award-img"><img src="assets/大二-二等奖学金.jpg" alt="大二二等奖学金" loading="lazy"></div>
-          <div class="award-info">
-            <span class="award-level">二等奖学金</span>
-            <h4 class="award-name">学业奖学金</h4>
-            <span class="award-date">大二</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+        <ul class="hero__tags" aria-label="目标方向">
+          <li class="hero__tag">Agent 开发</li>
+          <li class="hero__tag">AI 应用开发</li>
+          <li class="hero__tag">AI 全栈</li>
+        </ul>
 
-  <!-- ==================== Contact ==================== -->
-  <section id="contact" class="section">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-label">06</span>
-        <h2 class="section-title">联系我</h2>
-      </div>
-      <div class="contact-content reveal">
-        <p class="contact-text">如果你对我的项目或经历感兴趣，欢迎与我交流。</p>
-        <div class="contact-links">
-          <a href="https://github.com/dudu-feng" target="_blank" rel="noopener" class="contact-link">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.515.12-3.15 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.635.24 2.85.12 3.15.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57C20.565 21.795 24 17.31 24 12c0-6.63-5.37-12-12-12z"/></svg>
-            <span class="contact-label">GitHub</span>
-            <span class="contact-handle">@dudu-feng</span>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="https://github.com/dudu-feng" target="_blank" rel="noopener">
+            <svg class="btn__icon" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+            GitHub
           </a>
-          <!-- 邮箱由JS动态生成，防止爬虫抓取 -->
-          <div id="emailLinks" class="email-links"></div>
+          <a class="btn btn--ghost" href="#contact">
+            <svg class="btn__icon" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383-4.758 2.855L15 11.114V5.383zm-.034 6.878-5.03-3.018L8 10.11l-1.936-1.162L1.034 12.26A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.739zM1 11.114l4.758-2.876L1 5.383v5.731z"/></svg>
+            联系我
+          </a>
+        </div>
+
+        <dl class="hero__facts" aria-label="关键信息">
+          <div class="hero__fact"><dt>毕业届</dt><dd>2027 届</dd></div>
+          <div class="hero__fact"><dt>绩点</dt><dd>GPA 3.7</dd></div>
+          <div class="hero__fact"><dt>专业排名</dt><dd>第 8</dd></div>
+          <div class="hero__fact"><dt>院校</dt><dd>电子科技大学中山学院</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ===== 关于我 ===== -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section__head">
+          <span class="section__index">01</span>
+          <h2 class="section__title">关于我</h2>
+        </div>
+
+        <div class="about__grid">
+          <div class="about__bio">
+            <p>
+              软件工程专业。大二进入实验室项目组，从企业级 <strong>MES / ERP 系统</strong>前端做起，
+              大三学完后端晋升全栈，并跟随项目组前往真实企业完成<strong>项目对接与实施落地</strong>。
+            </p>
+            <p>
+              恰逢 AI 元年主动转向，独立完成开源智能体项目 <a href="https://github.com/dudu-feng/Avalon" target="_blank" rel="noopener">Avalon</a>，
+              目标成为 <strong>AI 应用 / Agent 方向</strong>的工程师。
+            </p>
+          </div>
+
+          <ul class="about__facts">
+            <li class="about__fact"><span class="about__fact-label">院校</span><span class="about__fact-value">电子科技大学中山学院</span></li>
+            <li class="about__fact"><span class="about__fact-label">专业</span><span class="about__fact-value">软件工程 · 本科（科班）</span></li>
+            <li class="about__fact"><span class="about__fact-label">届别</span><span class="about__fact-value">2027 届（2027.06 毕业）</span></li>
+            <li class="about__fact"><span class="about__fact-label">绩点 / 排名</span><span class="about__fact-value">GPA 3.7 · 专业第 8</span></li>
+            <li class="about__fact"><span class="about__fact-label">所在地</span><span class="about__fact-value">浙江湖州</span></li>
+          </ul>
+        </div>
+
+        <div class="about__highlights">
+          <h3 class="about__highlights-title">在校亮点</h3>
+          <ul class="about__highlight-tags">
+            <li>新生辩论赛「最佳辩手」</li>
+            <li>优秀班长（连续三年）</li>
+            <li>二等奖学金</li>
+            <li>实验室 P2 助理工程师</li>
+            <li>实验室 FSM 项目组组长</li>
+            <li>中共党员</li>
+          </ul>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ==================== Footer ==================== -->
-  <footer class="footer">
-    <p>© 2025 冯斌杰 · Built with HTML / CSS / JavaScript</p>
+    <!-- ===== 专业技能 ===== -->
+    <section class="section section--alt" id="skills">
+      <div class="container">
+        <div class="section__head">
+          <span class="section__index">02</span>
+          <h2 class="section__title">专业技能</h2>
+        </div>
+
+        <div class="skills__grid">
+          <article class="skill-group">
+            <h3 class="skill-group__title">前端</h3>
+            <ul class="skill-group__tags">
+              <li>Vue 2 / 3</li>
+              <li>React</li>
+              <li>TypeScript</li>
+              <li>JavaScript</li>
+              <li>Element Plus</li>
+              <li>Ant Design</li>
+            </ul>
+          </article>
+
+          <article class="skill-group">
+            <h3 class="skill-group__title">后端 &amp; 服务端</h3>
+            <ul class="skill-group__tags">
+              <li>Spring Boot</li>
+              <li>MyBatis</li>
+              <li>Redis</li>
+              <li>Node.js</li>
+              <li>MES / ERP</li>
+            </ul>
+          </article>
+
+          <article class="skill-group skill-group--accent">
+            <h3 class="skill-group__title">AI / Agent</h3>
+            <ul class="skill-group__tags">
+              <li>Python</li>
+              <li>LLM 应用开发</li>
+              <li>工具调用</li>
+              <li>多步规划</li>
+              <li>记忆 / 上下文管理</li>
+              <li>MCP</li>
+              <li>飞书开放平台</li>
+            </ul>
+          </article>
+
+          <article class="skill-group">
+            <h3 class="skill-group__title">桌面 &amp; 跨端</h3>
+            <ul class="skill-group__tags">
+              <li>Tauri</li>
+              <li>Rust</li>
+            </ul>
+          </article>
+
+          <article class="skill-group">
+            <h3 class="skill-group__title">工程化</h3>
+            <ul class="skill-group__tags">
+              <li>Git</li>
+              <li>Docker</li>
+              <li>CI / CD</li>
+              <li>云服务器部署</li>
+              <li>全流程交付</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 项目经历 ===== -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section__head">
+          <span class="section__index">03</span>
+          <h2 class="section__title">项目经历</h2>
+        </div>
+
+        <div class="projects__grid">
+          <!-- Avalon 置顶大卡片 -->
+          <article class="project-card project-card--featured">
+            <div class="project-card__media">
+              <img src="assets/Avalon-github仓库截屏.jpg" alt="Avalon 开源智能体项目 GitHub 仓库截屏" loading="lazy" />
+            </div>
+            <div class="project-card__body">
+              <div class="project-card__meta">
+                <span class="project-card__badge">核心项目</span>
+                <span class="project-card__badge project-card__badge--muted">开源 · Agent · 独立开发</span>
+              </div>
+              <h3 class="project-card__title">Avalon —— 开源智能体项目</h3>
+              <p class="project-card__desc">
+                智能体（Agent）项目，支持工具调用、多步规划、记忆与上下文管理（React 循环 / Skill / MCP）。
+                独立完成需求分析 → 框架设计 → 原型 → 开发 → 测试 → 部署打包全流程。
+              </p>
+              <ul class="project-card__points">
+                <li>多端多栈：Python + Web / Terminal 版（Python + Vue + TS + JS）；Tauri 桌面版（Rust + React + TS）</li>
+                <li>已完成飞书开放平台渠道对接，具备真实接入场景</li>
+              </ul>
+              <div class="project-card__stack">
+                <span>Python</span><span>Vue</span><span>TypeScript</span><span>Rust</span><span>React</span><span>Tauri</span>
+              </div>
+              <a class="project-card__link" href="https://github.com/dudu-feng/Avalon" target="_blank" rel="noopener">
+                查看仓库 <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-2H9a1 1 0 0 1 0-2h.83A3 3 0 0 0 7 5.5H6.354zm-.708 1.854a.5.5 0 1 1 .708-.708l2.5 2.5a.5.5 0 0 1 0 .708l-2.5 2.5a.5.5 0 0 1-.708-.708L7.793 9.5 5.646 7.354z"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- MES / ERP -->
+          <article class="project-card">
+            <div class="project-card__body">
+              <div class="project-card__meta">
+                <span class="project-card__badge project-card__badge--muted">实验室项目组 · 全栈 · 企业落地</span>
+              </div>
+              <h3 class="project-card__title">MES / ERP 企业级系统</h3>
+              <p class="project-card__desc">
+                参与 MES / ERP 系统前后端开发，跟随项目组前往湖南弗斯迈完成项目对接与实施落地，
+                完整走过「从代码到企业交付」全过程。
+              </p>
+              <ul class="project-card__points">
+                <li>成长线：大二前端 → 大三学完后端晋升全栈，独立负责前后端</li>
+                <li>具备真实企业项目对接、实施、落地经验</li>
+              </ul>
+              <div class="project-card__stack">
+                <span>Vue</span><span>JavaScript</span><span>Node.js</span><span>Spring Boot</span><span>MyBatis</span><span>Redis</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 课程项目 -->
+          <article class="project-card">
+            <div class="project-card__body">
+              <div class="project-card__meta">
+                <span class="project-card__badge project-card__badge--muted">课程项目</span>
+              </div>
+              <h3 class="project-card__title">全景中山 · 宠物社区 · 掌上湖州</h3>
+              <p class="project-card__desc">
+                课程项目中深化技术栈，广泛运用主流 Vue 生态组件库（高德地图、图片全景图等），
+                养成「读官方文档、快速上手新组件」的能力。
+              </p>
+              <div class="project-card__stack">
+                <span>Vue</span><span>Ant Design</span><span>Element Plus</span><span>高德地图</span><span>全景图组件</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 实习经历 ===== -->
+    <section class="section section--alt" id="experience">
+      <div class="container">
+        <div class="section__head">
+          <span class="section__index">04</span>
+          <h2 class="section__title">实习经历</h2>
+        </div>
+
+        <ol class="timeline">
+          <li class="timeline__item">
+            <div class="timeline__period">2024 – 2025</div>
+            <div class="timeline__body">
+              <h3 class="timeline__title">开发实习 <span class="timeline__org">· 中山睿数</span></h3>
+              <p class="timeline__desc">实验室导师公司，参与实际项目开发，与实验室项目组工作一脉相承，延续真实工程经验。</p>
+            </div>
+          </li>
+
+          <li class="timeline__item">
+            <div class="timeline__period">2025.07 – 2025.08</div>
+            <div class="timeline__body">
+              <h3 class="timeline__title">前端开发实习 <span class="timeline__org">· 浙江湖州</span></h3>
+              <p class="timeline__desc">自主投递简历获得。负责项目管理 / 产品管理 / 设备管理 / 物模型四大模块实现，组件封装，编写高质量前端代码。</p>
+            </div>
+          </li>
+
+          <li class="timeline__item">
+            <div class="timeline__period">2023 – 2026</div>
+            <div class="timeline__body">
+              <h3 class="timeline__title">网络维护实习 <span class="timeline__org">· 中国电信</span></h3>
+              <p class="timeline__desc">学生宿舍网络维护，三年持续负责。</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===== 比赛经历 ===== -->
+    <section class="section" id="awards">
+      <div class="container">
+        <div class="section__head">
+          <span class="section__index">05</span>
+          <h2 class="section__title">比赛经历</h2>
+          <p class="section__subtitle">均为项目类比赛（非传统算法赛），方向选择即体现工程 / 项目导向。点击证书可放大查看。</p>
+        </div>
+
+        <div class="awards__grid">
+          <figure class="award-card" data-lightbox="assets/2025计算机设计大赛-广东省三等奖.jpg">
+            <img src="assets/2025计算机设计大赛-广东省三等奖.jpg" alt="中国大学生计算机设计大赛 广东省三等奖" loading="lazy" />
+            <figcaption class="award-card__caption">
+              <span class="award-card__name">中国大学生计算机设计大赛</span>
+              <span class="award-card__prize">广东省三等奖 · 第二负责人</span>
+            </figcaption>
+          </figure>
+
+          <figure class="award-card" data-lightbox="assets/粤港澳大湾区远光杯-二等奖.jpg">
+            <img src="assets/粤港澳大湾区远光杯-二等奖.jpg" alt="粤港澳大湾区远光杯 二等奖" loading="lazy" />
+            <figcaption class="award-card__caption">
+              <span class="award-card__name">粤港澳大湾区「远光杯」</span>
+              <span class="award-card__prize">二等奖</span>
+            </figcaption>
+          </figure>
+
+          <figure class="award-card" data-lightbox="assets/粤港澳大湾区远光杯-三等奖.jpg">
+            <img src="assets/粤港澳大湾区远光杯-三等奖.jpg" alt="粤港澳大湾区远光杯 三等奖" loading="lazy" />
+            <figcaption class="award-card__caption">
+              <span class="award-card__name">粤港澳大湾区「远光杯」</span>
+              <span class="award-card__prize">三等奖</span>
+            </figcaption>
+          </figure>
+
+          <figure class="award-card" data-lightbox="assets/2025大学生创新大赛-校级铜奖.jpg">
+            <img src="assets/2025大学生创新大赛-校级铜奖.jpg" alt="大学生创新大赛 校级铜奖" loading="lazy" />
+            <figcaption class="award-card__caption">
+              <span class="award-card__name">大学生创新大赛</span>
+              <span class="award-card__prize">校级铜奖</span>
+            </figcaption>
+          </figure>
+
+          <figure class="award-card" data-lightbox="assets/2025大学生创新大赛-院级一等奖.jpg">
+            <img src="assets/2025大学生创新大赛-院级一等奖.jpg" alt="大学生创新大赛 院级一等奖" loading="lazy" />
+            <figcaption class="award-card__caption">
+              <span class="award-card__name">大学生创新大赛</span>
+              <span class="award-card__prize">院级一等奖</span>
+            </figcaption>
+          </figure>
+
+          <figure class="award-card" data-lightbox="assets/2025大学生创新训练计划-校级立项.jpg">
+            <img src="assets/2025大学生创新训练计划-校级立项.jpg" alt="大学生创新训练计划 校级立项" loading="lazy" />
+            <figcaption class="award-card__caption">
+              <span class="award-card__name">大学生创新训练计划</span>
+              <span class="award-card__prize">校级立项</span>
+            </figcaption>
+          </figure>
+
+          <figure class="award-card" data-lightbox="assets/2025海峡两岸广东省大学生创新作品赛-优秀奖.jpg">
+            <img src="assets/2025海峡两岸广东省大学生创新作品赛-优秀奖.jpg" alt="海峡两岸广东省大学生创新作品赛 优秀奖" loading="lazy" />
+            <figcaption class="award-card__caption">
+              <span class="award-card__name">海峡两岸广东省大学生创新作品赛</span>
+              <span class="award-card__prize">优秀奖</span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 联系 ===== -->
+    <section class="section section--alt" id="contact">
+      <div class="container">
+        <div class="section__head">
+          <span class="section__index">06</span>
+          <h2 class="section__title">联系我</h2>
+        </div>
+
+        <div class="contact">
+          <p class="contact__lead">如果你对我的项目或经历感兴趣，欢迎通过以下方式联系我。</p>
+
+          <div class="contact__links">
+            <a class="contact__card" href="mailto:duedudu.feng@gmail.com">
+              <span class="contact__card-label">Email</span>
+              <span class="contact__card-value">duedudu.feng@gmail.com</span>
+            </a>
+            <a class="contact__card" href="https://github.com/dudu-feng" target="_blank" rel="noopener">
+              <span class="contact__card-label">GitHub</span>
+              <span class="contact__card-value">github.com/dudu-feng</span>
+            </a>
+            <div class="contact__card contact__card--static">
+              <span class="contact__card-label">所在地</span>
+              <span class="contact__card-value">浙江湖州</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== 页脚 ===== -->
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <p>© 2026 冯斌杰 · Dudu Feng</p>
+      <p class="site-footer__hint">Built with plain HTML / CSS / JS</p>
+    </div>
   </footer>
 
-  <!-- ==================== Lightbox ==================== -->
-  <div class="lightbox" id="lightbox">
-    <span class="lightbox-close" id="lightboxClose">&times;</span>
-    <img class="lightbox-img" id="lightboxImg" src="" alt="">
+  <!-- ===== 灯箱 ===== -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="证书大图" hidden>
+    <button class="lightbox__close" id="lightbox-close" aria-label="关闭">
+      <svg viewBox="0 0 16 16" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/></svg>
+    </button>
+    <img class="lightbox__img" id="lightbox-img" src="" alt="证书大图" />
   </div>
 
   <script src="js/main.js"></script>
