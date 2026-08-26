@@ -207,29 +207,66 @@
         <div class="projects__grid">
           <!-- Avalon 置顶大卡片 -->
           <article class="project-card project-card--featured">
-            <div class="project-card__media">
-              <img src="assets/Avalon-github仓库截屏.jpg" alt="Avalon 开源智能体项目 GitHub 仓库截屏" loading="lazy" />
-            </div>
             <div class="project-card__body">
               <div class="project-card__meta">
                 <span class="project-card__badge">核心项目</span>
-                <span class="project-card__badge project-card__badge--muted">开源 · Agent · 独立开发</span>
+                <span class="project-card__badge project-card__badge--muted">开源 · Agent · 独立开发 · v0.3.0</span>
               </div>
-              <h3 class="project-card__title">Avalon —— 开源智能体项目</h3>
+              <h3 class="project-card__title">Avalon —— 本地 AI 个人助手</h3>
               <p class="project-card__desc">
-                智能体（Agent）项目，支持工具调用、多步规划、记忆与上下文管理（React 循环 / Skill / MCP）。
+                面向个人的轻量智能助手，采用 Tauri 2（Rust 后端 + React 前端）构建，
+                具备多轮对话、会话记忆、定时任务、渠道对接四大核心能力。
                 独立完成需求分析 → 框架设计 → 原型 → 开发 → 测试 → 部署打包全流程。
               </p>
-              <ul class="project-card__points">
-                <li>多端多栈：Python + Web / Terminal 版（Python + Vue + TS + JS）；Tauri 桌面版（Rust + React + TS）</li>
-                <li>已完成飞书开放平台渠道对接，具备真实接入场景</li>
-              </ul>
+
+              <div class="project-features">
+                <div class="project-feature">
+                  <h4 class="project-feature__title">多轮对话</h4>
+                  <p class="project-feature__desc">ReAct 引擎驱动，流式输出，工具调用与中间过程可视化</p>
+                </div>
+                <div class="project-feature">
+                  <h4 class="project-feature__title">会话记忆</h4>
+                  <p class="project-feature__desc">自动压缩 + 渐进式总结 + 向量检索（三模式），长对话不丢上下文</p>
+                </div>
+                <div class="project-feature">
+                  <h4 class="project-feature__title">定时任务</h4>
+                  <p class="project-feature__desc">once / daily / weekly 定时运行，执行历史可追问，未读角标提醒</p>
+                </div>
+                <div class="project-feature">
+                  <h4 class="project-feature__title">渠道对接</h4>
+                  <p class="project-feature__desc">飞书长连接，私聊 / 群聊 @ 触发，流式卡片与表情标记进度</p>
+                </div>
+              </div>
+
               <div class="project-card__stack">
-                <span>Python</span><span>Vue</span><span>TypeScript</span><span>Rust</span><span>React</span><span>Tauri</span>
+                <span>Tauri 2</span><span>Rust</span><span>React 19</span><span>TypeScript</span><span>Vite</span><span>tokio</span><span>candle</span><span>飞书长连接</span>
               </div>
               <a class="project-card__link" href="https://github.com/dudu-feng/Avalon" target="_blank" rel="noopener">
                 查看仓库 <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-2H9a1 1 0 0 1 0-2h.83A3 3 0 0 0 7 5.5H6.354zm-.708 1.854a.5.5 0 1 1 .708-.708l2.5 2.5a.5.5 0 0 1 0 .708l-2.5 2.5a.5.5 0 0 1-.708-.708L7.793 9.5 5.646 7.354z"/></svg>
               </a>
+            </div>
+
+            <div class="project-gallery">
+              <figure class="project-gallery__item" data-lightbox="assets/Avalon/Avalon-chat.jpg">
+                <img src="assets/Avalon/Avalon-chat.jpg" alt="Avalon 对话界面" loading="lazy" />
+                <figcaption>Chat · 对话</figcaption>
+              </figure>
+              <figure class="project-gallery__item" data-lightbox="assets/Avalon/Avalon-schedule.jpg">
+                <img src="assets/Avalon/Avalon-schedule.jpg" alt="Avalon 定时任务界面" loading="lazy" />
+                <figcaption>Schedule · 定时任务</figcaption>
+              </figure>
+              <figure class="project-gallery__item" data-lightbox="assets/Avalon/Avalon-setting.jpg">
+                <img src="assets/Avalon/Avalon-setting.jpg" alt="Avalon 设置界面" loading="lazy" />
+                <figcaption>Settings · 设置</figcaption>
+              </figure>
+              <figure class="project-gallery__item" data-lightbox="assets/Avalon/Avalon-home.jpg">
+                <img src="assets/Avalon/Avalon-home.jpg" alt="Avalon 主页界面" loading="lazy" />
+                <figcaption>Home · 主页</figcaption>
+              </figure>
+              <figure class="project-gallery__item" data-lightbox="assets/Avalon/Avalon-about.jpg">
+                <img src="assets/Avalon/Avalon-about.jpg" alt="Avalon 关于界面" loading="lazy" />
+                <figcaption>About · 关于</figcaption>
+              </figure>
             </div>
           </article>
 

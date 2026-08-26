@@ -97,21 +97,34 @@ github: https://github.com/dudu-feng
 
 > 排序按「与目标方向（AI/Agent）相关度」从高到低。
 
-### 4.1 Avalon —— 开源智能体项目（核心项目）
+### 4.1 Avalon —— 本地 AI 个人助手（核心项目 · 开源）
 
-- **时间**：2026 年5月 至今
+- **时间**：2026 年 5 月 至今
 - **角色**：独立开发者（全流程独立完成）
-- **定位**：一款智能体（Agent）项目
-- **多端版本**：
-  - Python + Web / Terminal 版（技术栈：Python + Vue + TypeScript + JavaScript）
-  - Tauri 桌面应用版（技术栈：Rust + React + TypeScript）
-- **渠道**：已完成飞书渠道对接
+- **定位**：面向个人的轻量智能助手，人性化、低门槛、交互友好
+- **技术栈**：Tauri 2（Rust 后端 + React 19 前端）+ TypeScript + Vite
+  - Rust 侧：tokio · reqwest · candle · serde · chrono
+  - 前端侧：自研组件库（CSS Modules，亮 / 暗双主题）· react-markdown · rehype-highlight
+- **四大核心能力**：
+  - 多轮对话：ReAct 引擎驱动，流式输出，工具调用与中间过程可视化
+  - 会话记忆：自动压缩 + 渐进式总结 + 向量检索（semantic / keyword / hybrid 三模式），长对话不丢上下文
+  - 定时任务：once / daily / weekly 定时运行，执行历史可继续追问，未读角标提醒
+  - 渠道对接：飞书长连接，私聊直接对话、群聊 @ 触发，流式卡片与表情标记进度
+- **其他特性**：
+  - 多模型配置（增删改、一键切换、各模型独立鉴权）
+  - 本地 embedding（candle `bge-small-zh-v1.5`，向量化零 API 成本）
+  - 用量统计（token 按「天 × 模型」聚合，仪表盘可视化）
+  - Markdown 渲染（GFM、代码高亮）
+- **渠道协议**：飞书长连接，tokio-tungstenite + prost 手写私有协议，不依赖第三方 SDK
 - **全流程**：独立完成 需求分析 → 框架设计 → 原型设计 → 开发 → 测试 → 部署打包
-- **亮点 / 成果**：
-  - 开源托管于 GitHub，项目地址：https://github.com/dudu-feng/Avalon 
-  - Agent 架构细节：工具调用 / 多步规划 / 记忆 / 上下文管理 / react循环 / skill /mcp
-- **佐证**：GitHub 仓库链接/截屏图片：https://github.com/dudu-feng/Avalon
-  - `assets/Avalon-github仓库截屏.jpg`
+- **版本演进**：早期 Python 飞书机器人 / Vue Web 版（已停止维护），飞书能力已用 Rust 重写合入 Tauri 版
+- **开源**：GitHub：https://github.com/dudu-feng/Avalon（MIT License）
+- **佐证（界面截图）**：
+  - `assets/Avalon/Avalon-home.jpg`（主页）
+  - `assets/Avalon/Avalon-chat.jpg`（对话）
+  - `assets/Avalon/Avalon-schedule.jpg`（定时任务）
+  - `assets/Avalon/Avalon-setting.jpg`（设置）
+  - `assets/Avalon/Avalon-about.jpg`（关于）
 
 ### 4.2 MES / ERP 企业级系统开发（实验室项目组）
 
