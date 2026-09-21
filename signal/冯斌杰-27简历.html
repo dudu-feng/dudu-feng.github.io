@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>冯斌杰 - 个人简历</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@600;700;900&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --ink: #1c1e21;          /* 正文墨色 */
+    --ink-light: #55595f;    /* 次要信息 */
+    --accent: #1e3a5f;       /* 传统藏蓝 */
+    --accent-soft: #eef2f7;  /* 藏蓝浅底 */
+    --rule: #d8dee6;         /* 分隔线 */
+    --paper: #ffffff;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+  body {
+    font-family: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+    color: var(--ink);
+    background: #e9ebee;
+    font-size: 10.5pt;
+    line-height: 1.62;
+  }
+
+  /* ===== A4 纸张 ===== */
+  .sheet {
+    width: 210mm;
+    min-height: 297mm;
+    margin: 24px auto;
+    background: var(--paper);
+    padding: 13mm 15mm 15mm;
+    box-shadow: 0 3px 18px rgba(20, 30, 45, 0.16);
+    position: relative;
+  }
+
+  /* ===== 页眉：姓名 / 意向 / 联系方式 ===== */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: 12px;
+    border-bottom: 2.5px solid var(--accent);
+  }
+
+  .header-main { flex: 1; }
+
+  .name-row {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+  }
+
+  .name {
+    font-family: "Noto Serif SC", "SimSun", serif;
+    font-weight: 900;
+    font-size: 30pt;
+    letter-spacing: 6px;
+    color: var(--accent);
+    line-height: 1.15;
+  }
+
+  .name-en {
+    font-size: 10pt;
+    color: var(--ink-light);
+    letter-spacing: 1px;
+  }
+
+  .intent {
+    margin-top: 8px;
+    font-size: 11.5pt;
+    font-weight: 700;
+    color: var(--ink);
+  }
+
+  .intent span { color: var(--accent); }
+
+  .profile {
+    margin-top: 6px;
+    max-width: 128mm;
+    color: var(--ink-light);
+    font-size: 10pt;
+    text-align: justify;
+  }
+
+  .contact {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 22px;
+    font-size: 9.5pt;
+    color: var(--ink);
+  }
+
+  .contact i {
+    font-style: normal;
+    color: var(--accent);
+    font-weight: 700;
+    margin-right: 5px;
+    font-size: 9pt;
+  }
+
+  .photo {
+    width: 30mm;
+    height: 41mm;
+    object-fit: cover;
+    border: 1px solid var(--rule);
+    padding: 2px;
+    margin-left: 12px;
+    flex-shrink: 0;
+  }
+
+  /* ===== 章节标题（传统样式：色块 + 细线）===== */
+  .section { margin-top: 14px; }
+
+  .sec-title {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin-bottom: 8px;
+  }
+
+  .sec-title::before {
+    content: "";
+    width: 5px;
+    height: 15px;
+    background: var(--accent);
+    flex-shrink: 0;
+  }
+
+  .sec-title h2 {
+    font-family: "Noto Serif SC", "SimSun", serif;
+    font-size: 13.5pt;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: var(--accent);
+  }
+
+  .sec-title::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: var(--rule);
+  }
+
+  /* ===== 条目：标题行 + 时间右对齐 ===== */
+  .entry { margin-bottom: 9px; }
+  .entry:last-child { margin-bottom: 0; }
+
+  .entry-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 10px;
+  }
+
+  .entry-title { font-weight: 700; font-size: 11pt; }
+
+  .entry-sub { font-weight: 400; color: var(--ink-light); font-size: 9.5pt; }
+
+  .entry-date {
+    font-size: 9.5pt;
+    color: var(--ink-light);
+    white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .entry-title .role {
+    font-weight: 500;
+    color: var(--accent);
+    font-size: 10pt;
+  }
+
+  ul.dots { list-style: none; margin-top: 2px; }
+  ul.dots li {
+    padding-left: 13px;
+    position: relative;
+    text-align: justify;
+    color: var(--ink);
+  }
+  ul.dots li::before {
+    content: "";
+    position: absolute;
+    left: 1px;
+    top: 0.62em;
+    width: 4.5px;
+    height: 4.5px;
+    background: var(--accent);
+  }
+  ul.dots li b { font-weight: 700; }
+
+  .tech-line {
+    font-size: 9.5pt;
+    color: var(--ink-light);
+    margin-top: 2px;
+  }
+  .tech-line b { color: var(--ink); font-weight: 500; }
+
+  /* 技能分组 */
+  .skill-row {
+    display: flex;
+    gap: 10px;
+    padding: 3.5px 0;
+  }
+  .skill-row + .skill-row { border-top: 1px dashed #e6eaef; }
+  .skill-key {
+    flex-shrink: 0;
+    width: 78px;
+    font-weight: 700;
+    color: var(--accent);
+    font-size: 10pt;
+  }
+  .skill-val { flex: 1; text-align: justify; }
+
+  /* 荣誉奖项：紧凑双栏 */
+  .award-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px 24px;
+  }
+  .award-grid li {
+    list-style: none;
+    padding-left: 13px;
+    position: relative;
+    font-size: 10pt;
+  }
+  .award-grid li::before {
+    content: "";
+    position: absolute;
+    left: 1px;
+    top: 0.6em;
+    width: 4.5px;
+    height: 4.5px;
+    background: var(--accent);
+  }
+  .award-grid .yr { color: var(--ink-light); font-size: 9pt; margin-right: 4px; }
+
+  .foot-note {
+    margin-top: 16px;
+    padding-top: 8px;
+    border-top: 1px solid var(--rule);
+    display: flex;
+    justify-content: space-between;
+    font-size: 8.5pt;
+    color: #98a0aa;
+    letter-spacing: 1px;
+  }
+
+  /* ===== 打印适配 ===== */
+  @media print {
+    body { background: none; font-size: 10.5pt; }
+    .sheet {
+      width: auto;
+      min-height: auto;
+      margin: 0;
+      padding: 12mm 14mm;
+      box-shadow: none;
+    }
+    /* 细粒度分页：允许长条目内部分页，但标题不孤悬、单条不断裂 */
+    .sec-title { break-after: avoid; }
+    .entry-head, .tech-line { break-after: avoid; }
+    ul.dots li, .skill-row, .award-grid li { break-inside: avoid; }
+  }
+
+  @media screen and (max-width: 840px) {
+    .sheet { width: 100%; margin: 0; padding: 20px 16px; }
+    .header { flex-direction: column; }
+    .photo { margin: 0 0 10px; order: -1; }
+  }
+</style>
+</head>
+<body>
+
+<div class="sheet">
+
+  <!-- ============ 页眉 ============ -->
+  <header class="header">
+    <div class="header-main">
+      <div class="name-row">
+        <h1 class="name">冯斌杰</h1>
+        <span class="name-en">DUDU FENG · 2027 届本科毕业生</span>
+      </div>
+      <p class="intent">求职意向：<span>Agent 开发 / AI 应用开发 / AI 全栈</span></p>
+      <p class="profile">
+        科班软件工程、工程底子扎实的全栈开发者：从实验室企业级系统（MES / ERP）起步，
+        独立完成开源智能体项目 Avalon，具备从需求分析到部署交付的全流程能力。
+      </p>
+      <div class="contact">
+        <span><i>✉</i>1186736810@qq.com</span>
+        <span><i>✉</i>duedudu.feng@gmail.com</span>
+        <span><i>⌂</i>github.com/dudu-feng</span>
+        <span><i>◎</i>浙江 · 湖州</span>
+      </div>
+      <p class="intent">详细可访问个人简历主页：<span>https://dudu-feng.github.io/</span></p>
+    </div>
+    <img class="photo" src="../assets/fbj-类证件照自拍.jpg" alt="冯斌杰证件照" />
+  </header>
+
+  <!-- ============ 教育背景 ============ -->
+  <section class="section">
+    <div class="sec-title"><h2>教育背景</h2></div>
+    <div class="entry">
+      <div class="entry-head">
+        <div class="entry-title">
+          电子科技大学中山学院
+          <span class="entry-sub">软件工程 · 本科</span>
+        </div>
+        <div class="entry-date">2023.09 – 2027.06</div>
+      </div>
+      <ul class="dots">
+        <li>GPA <b>3.7 / 4.0</b>，专业排名第 <b>8</b></li>
+      </ul>
+    </div>
+    <div class="sec-title"><h2>政治面貌</h2></div>
+    <div class="entry">
+      <div class="entry-head">
+        <div class="entry-title">
+          中国共产党党员
+        </div>
+        <div class="entry-date">2025.05 – 至今</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 专业技能 ============ -->
+  <section class="section">
+    <div class="sec-title"><h2>专业技能</h2></div>
+    <div class="skill-row">
+      <div class="skill-key">AI / Agent</div>
+      <div class="skill-val">Python；LLM 应用开发与智能体架构：工具调用（Function Calling）、多步推理、记忆 / 上下文管理；飞书开放平台渠道对接</div>
+    </div>
+    <div class="skill-row">
+      <div class="skill-key">前&nbsp;端</div>
+      <div class="skill-val">Vue（2/3）、TypeScript、React；Ant Design、Element Plus、高德地图等主流生态组件库，擅长阅读官方文档快速上手新框架</div>
+    </div>
+    <div class="skill-row">
+      <div class="skill-key">后&nbsp;端</div>
+      <div class="skill-val">Spring Boot、MyBatis、Redis；Node.js 服务端开发；熟悉 MES / ERP 企业级系统前后端开发与接口联调</div>
+    </div>
+    <div class="skill-row">
+      <div class="skill-key">桌面 / 工程化</div>
+      <div class="skill-val">Tauri 桌面应用开发（Rust）；Docker、CI/CD、云服务器部署；Git / GitHub 开源协作；AI 辅助开发落地于真实项目</div>
+    </div>
+  </section>
+
+  <!-- ============ 项目经历 ============ -->
+  <section class="section">
+    <div class="sec-title"><h2>项目经历</h2></div>
+
+    <div class="entry">
+      <div class="entry-head">
+        <div class="entry-title">
+          Avalon —— 本地 AI 个人助手
+          <span class="role">独立开发 · 开源（MIT）</span>
+        </div>
+        <div class="entry-date">2026.05 – 至今</div>
+      </div>
+      <p class="entry-title"><b>Github开源项目地址</b>：github.com/dudu-feng/avalon</p>
+      <p class="tech-line"><b>技术栈</b>：Tauri 2（Rust 后端 + React 19 前端）+ TypeScript · tokio / reqwest / candle / 自研组件库</p>
+      <ul class="dots">
+        <li><b>多轮对话</b>：ReAct 引擎驱动，流式输出，工具调用与中间推理过程可视化</li>
+        <li><b>会话记忆</b>：自动压缩 + 渐进式总结 + 向量检索（semantic / keyword / hybrid 三模式），长对话不丢上下文</li>
+        <li><b>渠道对接</b>：飞书长连接，私聊直接对话、群聊 @ 触发；tokio-tungstenite + prost 手写私有协议，不依赖第三方 SDK</li>
+        <li><b>定时任务</b>：once / daily / weekly 灵活调度，执行历史可继续追问，未读角标提醒</li>
+        <li>本地 embedding（candle · bge-small-zh-v1.5）实现向量化零 API 成本；多模型独立鉴权配置；token 用量按「天 × 模型」聚合可视化</li>
+        <li>独立完成需求分析 → 框架设计 → 原型设计 → 开发 → 测试 → 部署打包全流程</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-head">
+        <div class="entry-title">
+          MES / ERP 企业级系统开发
+          <span class="role">实验室 FSM 项目组 · 组长</span>
+        </div>
+        <div class="entry-date">2024 – 2025</div>
+      </div>
+      <p class="tech-line"><b>技术栈</b>：前端 Vue + JavaScript + Node.js ｜ 后端 Spring Boot + MyBatis + Redis</p>
+      <ul class="dots">
+        <li>大二负责前端开发，大三学完后端晋升<b>全栈</b>，独立负责前后端模块与接口联调</li>
+        <li>跟随项目组前往合作企业（湖南弗斯迈）完成<b>项目对接与实施落地</b>，完整走过「从代码到企业交付」全过程</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-head">
+        <div class="entry-title">
+          课程项目实践
+          <span class="entry-sub">全景中山 / 宠物社区管理系统 / 掌上湖州（鸿蒙）</span>
+        </div>
+        <div class="entry-date">2025 – 2026</div>
+      </div>
+      <ul class="dots">
+        <li>广泛使用主流 Vue 生态组件库（高德地图、全景图组件等），养成「读官方文档、快速上手新库」的工程能力</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ 实习经历 ============ -->
+  <section class="section">
+    <div class="sec-title"><h2>实习经历</h2></div>
+
+    <div class="entry">
+      <div class="entry-head">
+        <div class="entry-title">中山睿数 <span class="entry-sub">开发实习（实验室导师公司）</span></div>
+        <div class="entry-date">2024 – 2025</div>
+      </div>
+      <ul class="dots">
+        <li>参与实际项目开发，与实验室 FSM 项目组工作一脉相承，延续真实企业级工程经验</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-head">
+        <div class="entry-title">前端开发实习 <span class="entry-sub">暑期 · 浙江湖州（自主投递获得）</span></div>
+        <div class="entry-date">2025.07 – 2025.08</div>
+      </div>
+      <ul class="dots">
+        <li>负责项目管理 / 产品管理 / 设备管理 / 物模型<b>四大模块</b>实现，组件封装，编写高质量前端代码</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ 比赛获奖 ============ -->
+  <section class="section">
+    <div class="sec-title"><h2>比赛获奖</h2></div>
+    <ul class="award-grid">
+      <li><span class="yr">2025</span>中国大学生计算机设计大赛（广东赛区）· <b>省级三等奖</b>（第二负责人）</li>
+      <li><span class="yr">2025</span>粤港澳大湾区「远光杯」· <b>二等奖</b></li>
+      <li><span class="yr">2025</span>粤港澳大湾区「远光杯」· <b>三等奖</b></li>
+      <li><span class="yr">2025</span>大学生创新大赛 · <b>院级一等奖</b> / 校级铜奖</li>
+      <li><span class="yr">2025</span>大学生创新训练计划 · <b>校级立项</b></li>
+      <li><span class="yr">2025</span>海峡两岸（广东）大学生创新作品赛 · <b>优秀奖</b></li>
+    </ul>
+  </section>
+
+  <!-- ============ 荣誉与在校经历 ============ -->
+  <section class="section">
+    <div class="sec-title"><h2>荣誉与在校经历</h2></div>
+    <ul class="dots">
+      <li>二等奖学金 （大学期间全额）；连续三年「优秀班长」；优秀学生骨干、优秀共青团员、优秀四级帮扶</li>
+      <li>实验室 FSM 项目组组长，2024 年晋升 P2 助理工程师；新生辩论赛「最佳辩手」（团队四强）；大学期间入党</li>
+    </ul>
+  </section>
+
+  <div class="foot-note">
+    <span>FENG BINJIE · RESUME</span>
+    <span>github.com/dudu-feng/Avalon</span>
+  </div>
+
+</div>
+
+</body>
+</html>

@@ -1,7 +1,10 @@
 {
   "permissions": {
     "allow": [
-      "Read(//f/Avalon/**)"
+      "Read(//f/Avalon/**)",
+      "Read(//c/Users/梦染思忆/Desktop/实习/**)",
+      "Bash(python -c ' *)",
+      "Bash(python .tmp-optimize-assets.py)"
     ]
   }
 }
