@@ -25,8 +25,8 @@
     font-family: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
     color: var(--ink);
     background: #e9ebee;
-    font-size: 10.5pt;
-    line-height: 1.62;
+    font-size: 10pt;
+    line-height: 1.66;
   }
 
   /* ===== A4 纸张 ===== */
@@ -35,7 +35,7 @@
     min-height: 297mm;
     margin: 24px auto;
     background: var(--paper);
-    padding: 13mm 15mm 15mm;
+    padding: 12mm 15mm 14mm;
     box-shadow: 0 3px 18px rgba(20, 30, 45, 0.16);
     position: relative;
   }
@@ -45,7 +45,7 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    padding-bottom: 12px;
+    padding-bottom: 11px;
     border-bottom: 2.5px solid var(--accent);
   }
 
@@ -60,7 +60,7 @@
   .name {
     font-family: "Noto Serif SC", "SimSun", serif;
     font-weight: 900;
-    font-size: 30pt;
+    font-size: 29pt;
     letter-spacing: 6px;
     color: var(--accent);
     line-height: 1.15;
@@ -73,8 +73,8 @@
   }
 
   .intent {
-    margin-top: 8px;
-    font-size: 11.5pt;
+    margin-top: 7px;
+    font-size: 11pt;
     font-weight: 700;
     color: var(--ink);
   }
@@ -82,18 +82,18 @@
   .intent span { color: var(--accent); }
 
   .profile {
-    margin-top: 6px;
+    margin-top: 5px;
     max-width: 128mm;
     color: var(--ink-light);
-    font-size: 10pt;
+    font-size: 9.5pt;
     text-align: justify;
   }
 
   .contact {
-    margin-top: 10px;
+    margin-top: 9px;
     display: flex;
     flex-wrap: wrap;
-    gap: 4px 22px;
+    gap: 3px 20px;
     font-size: 9.5pt;
     color: var(--ink);
   }
@@ -107,8 +107,8 @@
   }
 
   .photo {
-    width: 30mm;
-    height: 41mm;
+    width: 28mm;
+    height: 38mm;
     object-fit: cover;
     border: 1px solid var(--rule);
     padding: 2px;
@@ -117,13 +117,13 @@
   }
 
   /* ===== 章节标题（传统样式：色块 + 细线）===== */
-  .section { margin-top: 14px; }
+  .section { margin-top: 11px; }
 
   .sec-title {
     display: flex;
     align-items: center;
     gap: 9px;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
   }
 
   .sec-title::before {
@@ -136,7 +136,7 @@
 
   .sec-title h2 {
     font-family: "Noto Serif SC", "SimSun", serif;
-    font-size: 13.5pt;
+    font-size: 13pt;
     font-weight: 700;
     letter-spacing: 3px;
     color: var(--accent);
@@ -150,7 +150,7 @@
   }
 
   /* ===== 条目：标题行 + 时间右对齐 ===== */
-  .entry { margin-bottom: 9px; }
+  .entry { margin-bottom: 8px; }
   .entry:last-child { margin-bottom: 0; }
 
   .entry-head {
@@ -160,7 +160,7 @@
     gap: 10px;
   }
 
-  .entry-title { font-weight: 700; font-size: 11pt; }
+  .entry-title { font-weight: 700; font-size: 10.5pt; }
 
   .entry-sub { font-weight: 400; color: var(--ink-light); font-size: 9.5pt; }
 
@@ -174,7 +174,7 @@
   .entry-title .role {
     font-weight: 500;
     color: var(--accent);
-    font-size: 10pt;
+    font-size: 9.5pt;
   }
 
   ul.dots { list-style: none; margin-top: 2px; }
@@ -199,38 +199,52 @@
     font-size: 9.5pt;
     color: var(--ink-light);
     margin-top: 2px;
+    text-align: justify;
   }
   .tech-line b { color: var(--ink); font-weight: 500; }
+
+  /* 条目收尾的补充说明（如软著状态），浅底缩进块 */
+  .note-line {
+    margin-top: 4px;
+    padding: 4px 9px;
+    background: var(--accent-soft);
+    border-left: 2.5px solid var(--accent);
+    font-size: 9.5pt;
+    color: var(--ink-light);
+    text-align: justify;
+  }
+  .note-line b { color: var(--accent); font-weight: 700; }
 
   /* 技能分组 */
   .skill-row {
     display: flex;
     gap: 10px;
-    padding: 3.5px 0;
+    padding: 3px 0;
   }
   .skill-row + .skill-row { border-top: 1px dashed #e6eaef; }
   .skill-key {
     flex-shrink: 0;
-    width: 78px;
+    width: 74px;
     font-weight: 700;
     color: var(--accent);
-    font-size: 10pt;
+    font-size: 9.5pt;
   }
   .skill-val { flex: 1; text-align: justify; }
 
-  /* 荣誉奖项：紧凑双栏 */
-  .award-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2px 24px;
-  }
-  .award-grid li {
+  /* 比赛获奖：赛事全称较长，单栏排列每条一行，比双栏折行更整齐且不额外占高 */
+  .award-list {
     list-style: none;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1px 0;
+  }
+  .award-list li {
     padding-left: 13px;
     position: relative;
-    font-size: 10pt;
+    font-size: 9.5pt;
+    text-align: justify;
   }
-  .award-grid li::before {
+  .award-list li::before {
     content: "";
     position: absolute;
     left: 1px;
@@ -239,10 +253,19 @@
     height: 4.5px;
     background: var(--accent);
   }
-  .award-grid .yr { color: var(--ink-light); font-size: 9pt; margin-right: 4px; }
+  .award-list .yr { color: var(--ink-light); font-size: 9pt; margin-right: 4px; }
+  .award-list .cap { color: var(--ink-light); font-size: 9pt; }
+
+  /* 课程项目：一行式罗列，省版面 */
+  .course-line {
+    font-size: 9.5pt;
+    color: var(--ink-light);
+    text-align: justify;
+  }
+  .course-line b { color: var(--ink); font-weight: 500; }
 
   .foot-note {
-    margin-top: 16px;
+    margin-top: 14px;
     padding-top: 8px;
     border-top: 1px solid var(--rule);
     display: flex;
@@ -253,19 +276,27 @@
   }
 
   /* ===== 打印适配 ===== */
+  /* 由 @page 统一控制页边距，保证每一页都有相同留白（不依赖浏览器默认值） */
+  @page { size: A4; margin: 12mm 14mm; }
+
   @media print {
-    body { background: none; font-size: 10.5pt; }
+    body { background: none; font-size: 10pt; }
     .sheet {
       width: auto;
       min-height: auto;
       margin: 0;
-      padding: 12mm 14mm;
+      padding: 0;
       box-shadow: none;
     }
-    /* 细粒度分页：允许长条目内部分页，但标题不孤悬、单条不断裂 */
+    /* 细粒度分页：标题不孤悬、单条不断裂 */
     .sec-title { break-after: avoid; }
+    /* 补充说明块是 Avalon 条目的收尾，允许其后分页，
+       否则会被强制与下一条 MES 绑定、整组掉到第 2 页 */
     .entry-head, .tech-line { break-after: avoid; }
-    ul.dots li, .skill-row, .award-grid li { break-inside: avoid; }
+    .note-line { break-before: avoid; }
+    /* 条目本身允许跨页，避免「整块掉页」在页尾留下大片空白；
+       断点仍受上面 break-after: avoid 约束，不会出现标题孤悬 */
+    ul.dots li, .skill-row, .award-list li, .foot-note { break-inside: avoid; }
   }
 
   @media screen and (max-width: 840px) {
@@ -289,17 +320,18 @@
       <p class="intent">求职意向：<span>Agent 开发 / AI 应用开发 / AI 全栈</span></p>
       <p class="profile">
         科班软件工程、工程底子扎实的全栈开发者：从实验室企业级系统（MES / ERP）起步，
-        独立完成开源智能体项目 Avalon，具备从需求分析到部署交付的全流程能力。
+        大三学完后端晋升全栈并任 23 级本科开发组组长；AI 爆发后主动转向，
+        独立完成开源智能体项目 Avalon，并以此为题完成毕业设计，具备从需求分析到部署交付的全流程能力。
       </p>
       <div class="contact">
-        <span><i>✉</i>1186736810@qq.com</span>
-        <span><i>✉</i>duedudu.feng@gmail.com</span>
+        <span><i>✉</i><span data-mail data-mail-user="1186736810" data-mail-host="qq,com">1186736810 [at] qq.com</span></span>
+        <span><i>✉</i><span data-mail data-mail-user="duedudu,feng" data-mail-host="gmail,com">duedudu.feng [at] gmail.com</span></span>
         <span><i>⌂</i>github.com/dudu-feng</span>
         <span><i>◎</i>浙江 · 湖州</span>
       </div>
       <p class="intent">详细可访问个人简历主页：<span>https://dudu-feng.github.io/</span></p>
     </div>
-    <img class="photo" src="../assets/fbj-类证件照自拍.jpg" alt="冯斌杰证件照" />
+    <img class="photo" src="../assets/头像.jpg" alt="冯斌杰" />
   </header>
 
   <!-- ============ 教育背景 ============ -->
@@ -309,22 +341,14 @@
       <div class="entry-head">
         <div class="entry-title">
           电子科技大学中山学院
-          <span class="entry-sub">软件工程 · 本科</span>
+          <span class="entry-sub">计算机学院 · 软件工程 · 本科（科班）</span>
         </div>
         <div class="entry-date">2023.09 – 2027.06</div>
       </div>
       <ul class="dots">
-        <li>GPA <b>3.7 / 4.0</b>，专业排名第 <b>8</b></li>
+        <li>GPA <b>3.7 / 4.0</b>，专业排名第 <b>8</b>；连续三年获校级奖学金；中国共产党党员（<b>2026.05</b> 入党）</li>
+        <li><b>专业课程</b>：前端开发、JavaEE、软件需求工程、Python、大模型训练与微调</li>
       </ul>
-    </div>
-    <div class="sec-title"><h2>政治面貌</h2></div>
-    <div class="entry">
-      <div class="entry-head">
-        <div class="entry-title">
-          中国共产党党员
-        </div>
-        <div class="entry-date">2025.05 – 至今</div>
-      </div>
     </div>
   </section>
 
@@ -333,19 +357,19 @@
     <div class="sec-title"><h2>专业技能</h2></div>
     <div class="skill-row">
       <div class="skill-key">AI / Agent</div>
-      <div class="skill-val">Python；LLM 应用开发与智能体架构：工具调用（Function Calling）、多步推理、记忆 / 上下文管理；飞书开放平台渠道对接</div>
+      <div class="skill-val">Python；LLM 应用开发与智能体架构：ReAct 引擎、工具调用（Function Calling）、多步推理与任务规划、会话记忆与上下文压缩；本地 embedding 与向量检索（candle · bge-small-zh-v1.5）；飞书开放平台渠道对接</div>
     </div>
     <div class="skill-row">
       <div class="skill-key">前&nbsp;端</div>
-      <div class="skill-val">Vue（2/3）、TypeScript、React；Ant Design、Element Plus、高德地图等主流生态组件库，擅长阅读官方文档快速上手新框架</div>
+      <div class="skill-val">Vue（2 / 3）、React、TypeScript、JavaScript；Ant Design、Element Plus、高德地图、全景图组件等主流生态组件库，擅长阅读官方文档快速上手新框架</div>
     </div>
     <div class="skill-row">
       <div class="skill-key">后&nbsp;端</div>
-      <div class="skill-val">Spring Boot、MyBatis、Redis；Node.js 服务端开发；熟悉 MES / ERP 企业级系统前后端开发与接口联调</div>
+      <div class="skill-val">Spring Boot、MyBatis、Redis；Node.js 服务端开发；RESTful 接口设计与前后端联调，熟悉 MES / ERP 企业级系统开发</div>
     </div>
     <div class="skill-row">
       <div class="skill-key">桌面 / 工程化</div>
-      <div class="skill-val">Tauri 桌面应用开发（Rust）；Docker、CI/CD、云服务器部署；Git / GitHub 开源协作；AI 辅助开发落地于真实项目</div>
+      <div class="skill-val">Tauri 2 桌面应用开发（Rust）；Docker、CI/CD、云服务器部署；Git / GitHub 开源协作；AI 辅助开发落地于真实项目</div>
     </div>
   </section>
 
@@ -356,34 +380,37 @@
     <div class="entry">
       <div class="entry-head">
         <div class="entry-title">
-          Avalon —— 本地 AI 个人助手
+          Avalon —— 本地 AI 个人智能体
           <span class="role">独立开发 · 开源（MIT）</span>
         </div>
         <div class="entry-date">2026.05 – 至今</div>
       </div>
-      <p class="entry-title"><b>Github开源项目地址</b>：github.com/dudu-feng/avalon</p>
+      <p class="tech-line"><b>项目地址</b>：github.com/dudu-feng/avalon</p>
       <p class="tech-line"><b>技术栈</b>：Tauri 2（Rust 后端 + React 19 前端）+ TypeScript · tokio / reqwest / candle / 自研组件库</p>
       <ul class="dots">
         <li><b>多轮对话</b>：ReAct 引擎驱动，流式输出，工具调用与中间推理过程可视化</li>
         <li><b>会话记忆</b>：自动压缩 + 渐进式总结 + 向量检索（semantic / keyword / hybrid 三模式），长对话不丢上下文</li>
         <li><b>渠道对接</b>：飞书长连接，私聊直接对话、群聊 @ 触发；tokio-tungstenite + prost 手写私有协议，不依赖第三方 SDK</li>
         <li><b>定时任务</b>：once / daily / weekly 灵活调度，执行历史可继续追问，未读角标提醒</li>
-        <li>本地 embedding（candle · bge-small-zh-v1.5）实现向量化零 API 成本；多模型独立鉴权配置；token 用量按「天 × 模型」聚合可视化</li>
-        <li>独立完成需求分析 → 框架设计 → 原型设计 → 开发 → 测试 → 部署打包全流程</li>
+        <li>本地 embedding（candle · bge-small-zh-v1.5）实现向量化<b>零 API 成本</b>；多模型独立鉴权配置；token 用量按「天 × 模型」聚合可视化</li>
+        <li>独立完成需求分析 → 框架设计 → 原型设计 → 开发 → 测试 → 部署打包<b>全流程</b></li>
       </ul>
+      <p class="note-line">
+        个人开源项目 Avalon · <b>软著申请中</b>
+      </p>
     </div>
 
     <div class="entry">
       <div class="entry-head">
         <div class="entry-title">
           MES / ERP 企业级系统开发
-          <span class="role">实验室 FSM 项目组 · 组长</span>
+          <span class="role">23 级本科开发组 · 组长</span>
         </div>
         <div class="entry-date">2024 – 2025</div>
       </div>
       <p class="tech-line"><b>技术栈</b>：前端 Vue + JavaScript + Node.js ｜ 后端 Spring Boot + MyBatis + Redis</p>
       <ul class="dots">
-        <li>大二负责前端开发，大三学完后端晋升<b>全栈</b>，独立负责前后端模块与接口联调</li>
+        <li>大二负责前端开发，大三学完后端晋升<b>全栈</b>，独立负责前后端模块与接口联调；任开发组组长，负责任务拆分与组内协作</li>
         <li>跟随项目组前往合作企业（湖南弗斯迈）完成<b>项目对接与实施落地</b>，完整走过「从代码到企业交付」全过程</li>
       </ul>
     </div>
@@ -392,11 +419,12 @@
       <div class="entry-head">
         <div class="entry-title">
           课程项目实践
-          <span class="entry-sub">全景中山 / 宠物社区管理系统 / 掌上湖州（鸿蒙）</span>
+          <span class="entry-sub">全景中山 / 社区宠物管理系统 / 掌上湖州（鸿蒙）</span>
         </div>
         <div class="entry-date">2025 – 2026</div>
       </div>
       <ul class="dots">
+        <li><b>全景中山</b>（Spring Boot + Vue，已部署上线）政务全景导览与点位映射；<b>社区宠物管理系统</b>（Vue + 高德地图）宠物地图与区域规划；<b>掌上湖州</b>（HarmonyOS）本地文旅移动应用</li>
         <li>广泛使用主流 Vue 生态组件库（高德地图、全景图组件等），养成「读官方文档、快速上手新库」的工程能力</li>
       </ul>
     </div>
@@ -408,21 +436,43 @@
 
     <div class="entry">
       <div class="entry-head">
-        <div class="entry-title">中山睿数 <span class="entry-sub">开发实习（实验室导师公司）</span></div>
+        <div class="entry-title">
+          中山睿数信息技术有限责任公司
+          <span class="role">全栈开发 · FSM 开发组组长</span>
+        </div>
         <div class="entry-date">2024 – 2025</div>
       </div>
+      <p class="tech-line"><b>技术栈</b>：Vue + JavaScript + Node.js ｜ Spring Boot + MyBatis + Redis</p>
       <ul class="dots">
-        <li>参与实际项目开发，与实验室 FSM 项目组工作一脉相承，延续真实企业级工程经验</li>
+        <li>独立负责前后端模块与接口联调，从实验室项目延续到真实企业交付</li>
       </ul>
     </div>
 
     <div class="entry">
       <div class="entry-head">
-        <div class="entry-title">前端开发实习 <span class="entry-sub">暑期 · 浙江湖州（自主投递获得）</span></div>
+        <div class="entry-title">
+          湖州芯洋科技有限公司
+          <span class="role">前端开发</span>
+        </div>
         <div class="entry-date">2025.07 – 2025.08</div>
       </div>
+      <p class="tech-line"><b>技术栈</b>：Vue + JavaScript + Node.js</p>
       <ul class="dots">
         <li>负责项目管理 / 产品管理 / 设备管理 / 物模型<b>四大模块</b>实现，组件封装，编写高质量前端代码</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-head">
+        <div class="entry-title">
+          中国电信中山分公司
+          <span class="role">网络维护员</span>
+        </div>
+        <div class="entry-date">2023 – 2026</div>
+      </div>
+      <ul class="dots">
+        <li>负责校园 <b>5 个宿舍片区</b>的网络维修：依据微信公众号报修工单上门处理</li>
+        <li>负责从用户电脑到宿舍路由器、再到机房交换机的全链路故障排查与维修</li>
       </ul>
     </div>
   </section>
@@ -430,13 +480,13 @@
   <!-- ============ 比赛获奖 ============ -->
   <section class="section">
     <div class="sec-title"><h2>比赛获奖</h2></div>
-    <ul class="award-grid">
-      <li><span class="yr">2025</span>中国大学生计算机设计大赛（广东赛区）· <b>省级三等奖</b>（第二负责人）</li>
-      <li><span class="yr">2025</span>粤港澳大湾区「远光杯」· <b>二等奖</b></li>
-      <li><span class="yr">2025</span>粤港澳大湾区「远光杯」· <b>三等奖</b></li>
-      <li><span class="yr">2025</span>大学生创新大赛 · <b>院级一等奖</b> / 校级铜奖</li>
-      <li><span class="yr">2025</span>大学生创新训练计划 · <b>校级立项</b></li>
-      <li><span class="yr">2025</span>海峡两岸（广东）大学生创新作品赛 · <b>优秀奖</b></li>
+    <ul class="award-list">
+      <li><span class="yr">2025</span>中国大学生计算机设计大赛（广东赛区）· <b>省级三等奖</b> <span class="cap">（第二负责人）</span></li>
+      <li><span class="yr">2025</span>粤港澳大湾区「远光杯」· <b>二等奖</b> <span class="cap">（项目组长）</span></li>
+      <li><span class="yr">2025</span>粤港澳大湾区「远光杯」· <b>三等奖</b> <span class="cap">（项目组长）</span></li>
+      <li><span class="yr">2025</span>大学生创新大赛 · <b>院级一等奖</b> / 校级铜奖 <span class="cap">（项目组长）</span></li>
+      <li><span class="yr">2025</span>大学生创新训练计划 · <b>校级立项</b> <span class="cap">（团队第二负责人）</span></li>
+      <li><span class="yr">2025</span>海峡两岸（广东）大学生创新作品赛 · <b>优秀奖</b> <span class="cap">（项目第二负责人）</span></li>
     </ul>
   </section>
 
@@ -444,8 +494,9 @@
   <section class="section">
     <div class="sec-title"><h2>荣誉与在校经历</h2></div>
     <ul class="dots">
-      <li>二等奖学金 （大学期间全额）；连续三年「优秀班长」；优秀学生骨干、优秀共青团员、优秀四级帮扶</li>
-      <li>实验室 FSM 项目组组长，2024 年晋升 P2 助理工程师；新生辩论赛「最佳辩手」（团队四强）；大学期间入党</li>
+      <li>连续三年「优秀班长」，并获优秀学生骨干、优秀共青团员、优秀四级帮扶；新生辩论赛「最佳辩手」（团队四强）</li>
+      <li>大二下学期起任实验室 <b>23 级本科开发组组长</b>；高中毕业自学自媒体，暑假更新 84 篇稿件，B 站累计 <b>94 万播放</b>，同期输出 Avalon 开发日志与教程</li>
+      <li>自学能力强、内驱力足：大一大二学完专业开发知识进入实验室，大三学完后端晋升全栈，AI 爆发后主动转向智能体方向</li>
     </ul>
   </section>
 
@@ -455,6 +506,16 @@
   </div>
 
 </div>
+
+<script>
+  /* 邮箱拼接注入：源码中不出现完整地址与邮件协议，规避正则爬虫；
+     打印 / 导出 PDF 时 JS 已执行，PDF 中仍是完整邮箱。 */
+  Array.prototype.forEach.call(document.querySelectorAll('[data-mail]'), function (el) {
+    var user = (el.getAttribute('data-mail-user') || '').split(',').join('.');
+    var host = (el.getAttribute('data-mail-host') || '').split(',').join('.');
+    if (user && host) el.textContent = user + '@' + host;
+  });
+</script>
 
 </body>
 </html>
