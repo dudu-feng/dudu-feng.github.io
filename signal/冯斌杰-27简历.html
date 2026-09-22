@@ -106,14 +106,41 @@
     font-size: 9pt;
   }
 
+  /* 右侧栏：证件照 + 简历二维码。
+     二维码落在照片正下方，纵向正好与左侧「个人简历主页」那行网址齐平，
+     读者看到网址的同时就能顺手扫码 */
+  .header-aside {
+    flex-shrink: 0;
+    margin-left: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+  }
+
   .photo {
     width: 28mm;
     height: 38mm;
     object-fit: cover;
     border: 1px solid var(--rule);
     padding: 2px;
-    margin-left: 12px;
-    flex-shrink: 0;
+  }
+
+  .qr { margin: 0; text-align: center; }
+
+  .qr__img {
+    display: block;
+    width: 22mm;
+    height: 22mm;
+  }
+
+  .qr__cap {
+    display: block;
+    margin-top: 2px;
+    font-size: 7pt;
+    line-height: 1.3;
+    color: var(--ink-light);
+    letter-spacing: 0.3px;
   }
 
   /* ===== 章节标题（传统样式：色块 + 细线）===== */
@@ -302,7 +329,14 @@
   @media screen and (max-width: 840px) {
     .sheet { width: 100%; margin: 0; padding: 20px 16px; }
     .header { flex-direction: column; }
-    .photo { margin: 0 0 10px; order: -1; }
+    /* 窄屏改为「照片 + 二维码」横排置顶 */
+    .header-aside {
+      flex-direction: row;
+      align-items: center;
+      gap: 12px;
+      margin: 0 0 10px;
+      order: -1;
+    }
   }
 </style>
 </head>
@@ -331,7 +365,13 @@
       </div>
       <p class="intent">详细可访问个人简历主页：<span>https://dudu-feng.github.io/</span></p>
     </div>
-    <img class="photo" src="../assets/头像.jpg" alt="冯斌杰" />
+    <div class="header-aside">
+      <img class="photo" src="../assets/头像.jpg" alt="冯斌杰" />
+      <figure class="qr">
+        <img class="qr__img" src="../assets/简历二维码.png" alt="扫码访问 https://dudu-feng.github.io/" />
+        <figcaption class="qr__cap">扫码看在线简历</figcaption>
+      </figure>
+    </div>
   </header>
 
   <!-- ============ 教育背景 ============ -->
