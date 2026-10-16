@@ -364,6 +364,13 @@ ol {
   color: var(--accent-strong);
 }
 
+/* 小尺寸按钮：用于项目卡片等内嵌场景，避免整页主按钮的体量感 */
+.btn--sm {
+  gap: 6px;
+  padding: 8px 16px;
+  font-size: 0.86rem;
+}
+
 .btn:hover {
   transform: translateY(-2px);
 }
@@ -783,12 +790,18 @@ ol {
   border: 1px solid var(--border);
 }
 
-.project-card__link {
-  display: inline-flex;
+/* 卡片底部操作区：下载 / 仓库 / 版本说明 */
+.project-card__actions {
+  display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 6px;
-  font-size: 0.9rem;
-  font-weight: 500;
+  gap: 12px;
+}
+
+.project-card__hint {
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  color: var(--text-faint);
 }
 
 /* 毕业设计说明 */

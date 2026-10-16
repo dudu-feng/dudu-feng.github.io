@@ -36,7 +36,7 @@ dudu-feng.github.io/
 ├── assets/                 # 按用途分类的图片资源
 │   ├── 头像.jpg
 │   ├── 简历二维码.png          # 指向本人简历主页，用于一页纸简历扫码
-│   ├── Avalon（个人开源项目）/   # 项目界面截图（01-06）
+│   ├── Avalon（个人开源项目）/   # 项目界面截图（01-06）+ Windows 安装包
 │   ├── 企业MES系统/            # 企业对接与实施现场
 │   ├── 全景中山（springboot+vue）/
 │   ├── 社区宠物管理系统/
@@ -52,8 +52,12 @@ dudu-feng.github.io/
 └── README.md
 ```
 
-> 图片约定：所有图片最长边控制在 1600px 以内、JPEG 质量 82，
-> 并用 `loading="lazy"` 延迟加载，首屏只加载头像。
+> 图片约定：截图与证书统一转为 **WebP**（照片类 q80、文字类证书 q86），
+> 最长边控制在 1600px 以内，并用 `loading="lazy"` 延迟加载，首屏只加载头像。
+> 仅 `头像.jpg` 保留 JPEG —— 一页纸简历打印成 PDF 时对 JPEG 兼容性更好。
+
+> Avalon 安装包 `Avalon_0.6.0_x64-setup.exe` 随仓库直接分发（不走 GitHub Releases），
+> 由项目卡片的「下载 Windows 版」按钮经 `download` 属性直接下载。
 
 > 说明：`doc/resume.md` 是简历的**单一内容源**，网站内容由它精简而来。
 > 该目录已加入 `.gitignore`，不会上传到公开仓库。

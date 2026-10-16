@@ -265,7 +265,7 @@
             <div class="project-card__body">
               <div class="project-card__meta">
                 <span class="project-card__badge">核心项目 · 毕业设计</span>
-                <span class="project-card__badge project-card__badge--muted">开源 · MIT · v0.5.0 · 独立开发</span>
+                <span class="project-card__badge project-card__badge--muted">开源 · MIT · v0.6.0 · 独立开发</span>
               </div>
               <h3 class="project-card__title">Avalon —— 本地 AI 个人助手</h3>
               <p class="project-card__desc">
@@ -313,36 +313,45 @@
               <div class="project-card__stack">
                 <span>Tauri 2</span><span>Rust</span><span>React 19</span><span>TypeScript</span><span>tokio</span><span>reqwest</span><span>candle</span><span>飞书长连接</span>
               </div>
-              <a class="project-card__link" href="https://github.com/dudu-feng/Avalon" target="_blank" rel="noopener">
-                查看仓库 <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-2H9a1 1 0 0 1 0-2h.83A3 3 0 0 0 7 5.5H6.354zm-.708 1.854a.5.5 0 1 1 .708-.708l2.5 2.5a.5.5 0 0 1 0 .708l-2.5 2.5a.5.5 0 0 1-.708-.708L7.793 9.5 5.646 7.354z"/></svg>
-              </a>
+              <div class="project-card__actions">
+                <!-- 安装包直接随仓库分发，不走 Release；download 属性让浏览器直接下载而非跳转打开 -->
+                <a class="btn btn--primary btn--sm" href="assets/Avalon（个人开源项目）/Avalon_0.6.0_x64-setup.exe" download>
+                  <svg class="btn__icon" viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><path fill="currentColor" d="M8 .75a.75.75 0 0 1 .75.75v6.44l2.22-2.22a.75.75 0 1 1 1.06 1.06l-3.5 3.5a.75.75 0 0 1-1.06 0l-3.5-3.5a.75.75 0 1 1 1.06-1.06l2.22 2.22V1.5A.75.75 0 0 1 8 .75zM2.5 11.5a.75.75 0 0 1 .75.75v1.25c0 .138.112.25.25.25h9c.138 0 .25-.112.25-.25V12.25a.75.75 0 0 1 1.5 0v1.25A1.75 1.75 0 0 1 12.5 15.25h-9A1.75 1.75 0 0 1 1.75 13.5V12.25a.75.75 0 0 1 .75-.75z"/></svg>
+                  下载 Windows 版
+                </a>
+                <a class="btn btn--ghost btn--sm" href="https://github.com/dudu-feng/Avalon" target="_blank" rel="noopener">
+                  <svg class="btn__icon" viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+                  查看仓库
+                </a>
+                <span class="project-card__hint">v0.6.0 · Windows x64 · 约 46 MB</span>
+              </div>
             </div>
 
             <div class="carousel" data-carousel aria-roledescription="轮播" aria-label="Avalon 界面截图">
               <div class="carousel__viewport">
                 <ul class="carousel__track">
                   <li class="carousel__slide">
-                    <img src="assets/Avalon（个人开源项目）/01-对话.jpg" alt="Avalon 对话界面，展示工具调用与中间推理过程" loading="lazy" data-lightbox="assets/Avalon（个人开源项目）/01-对话.jpg" />
+                    <img src="assets/Avalon（个人开源项目）/01-对话.webp" alt="Avalon 对话界面，展示工具调用与中间推理过程" loading="lazy" data-lightbox="assets/Avalon（个人开源项目）/01-对话.webp" />
                     <span class="carousel__caption">对话 · ReAct 引擎与工具调用可视化</span>
                   </li>
                   <li class="carousel__slide">
-                    <img src="assets/Avalon（个人开源项目）/02-仪表盘.jpg" alt="Avalon 仪表盘，按天与模型聚合 token 用量" loading="lazy" data-lightbox="assets/Avalon（个人开源项目）/02-仪表盘.jpg" />
+                    <img src="assets/Avalon（个人开源项目）/02-仪表盘.webp" alt="Avalon 仪表盘，按天与模型聚合 token 用量" loading="lazy" data-lightbox="assets/Avalon（个人开源项目）/02-仪表盘.webp" />
                     <span class="carousel__caption">仪表盘 · token 用量按「天 × 模型」聚合</span>
                   </li>
                   <li class="carousel__slide">
-                    <img src="assets/Avalon（个人开源项目）/03-灵魂.jpg" alt="Avalon 灵魂页，用户画像与自我设定管理" loading="lazy" data-lightbox="assets/Avalon（个人开源项目）/03-灵魂.jpg" />
+                    <img src="assets/Avalon（个人开源项目）/03-灵魂.webp" alt="Avalon 灵魂页，用户画像与自我设定管理" loading="lazy" data-lightbox="assets/Avalon（个人开源项目）/03-灵魂.webp" />
                     <span class="carousel__caption">灵魂 · 用户画像与自我设定的长期记忆</span>
                   </li>
                   <li class="carousel__slide">
-                    <img src="assets/Avalon（个人开源项目）/04-设置.jpg" alt="Avalon 设置页，多模型独立鉴权配置" loading="lazy" data-lightbox="assets/Avalon（个人开源项目）/04-设置.jpg" />
+                    <img src="assets/Avalon（个人开源项目）/04-设置.webp" alt="Avalon 设置页，多模型独立鉴权配置" loading="lazy" data-lightbox="assets/Avalon（个人开源项目）/04-设置.webp" />
                     <span class="carousel__caption">设置 · 多模型独立鉴权与一键切换</span>
                   </li>
                   <li class="carousel__slide">
-                    <img src="assets/Avalon（个人开源项目）/05-GitHub-README.jpg" alt="Avalon GitHub README 页面" loading="lazy" data-lightbox="assets/Avalon（个人开源项目）/05-GitHub-README.jpg" />
+                    <img src="assets/Avalon（个人开源项目）/05-GitHub-README.webp" alt="Avalon GitHub README 页面" loading="lazy" data-lightbox="assets/Avalon（个人开源项目）/05-GitHub-README.webp" />
                     <span class="carousel__caption">README · 功能特性与安全边界说明</span>
                   </li>
                   <li class="carousel__slide">
-                    <img src="assets/Avalon（个人开源项目）/06-GitHub-仓库.jpg" alt="Avalon GitHub 仓库首页" loading="lazy" data-lightbox="assets/Avalon（个人开源项目）/06-GitHub-仓库.jpg" />
+                    <img src="assets/Avalon（个人开源项目）/06-GitHub-仓库.webp" alt="Avalon GitHub 仓库首页" loading="lazy" data-lightbox="assets/Avalon（个人开源项目）/06-GitHub-仓库.webp" />
                     <span class="carousel__caption">仓库 · MIT 开源，107 commit / 8 release</span>
                   </li>
                 </ul>
@@ -381,15 +390,15 @@
               <div class="carousel__viewport">
                 <ul class="carousel__track">
                   <li class="carousel__slide">
-                    <img src="assets/企业MES系统/湖南弗斯迈出差-项目对接与实施01.jpg" alt="前往湖南弗斯迈进行项目对接与实施" loading="lazy" data-lightbox="assets/企业MES系统/湖南弗斯迈出差-项目对接与实施01.jpg" />
+                    <img src="assets/企业MES系统/湖南弗斯迈出差-项目对接与实施01.webp" alt="前往湖南弗斯迈进行项目对接与实施" loading="lazy" data-lightbox="assets/企业MES系统/湖南弗斯迈出差-项目对接与实施01.webp" />
                     <span class="carousel__caption">湖南弗斯迈 · 项目对接与实施</span>
                   </li>
                   <li class="carousel__slide">
-                    <img src="assets/企业MES系统/湖南弗斯迈出差-项目对接与实施02.jpg" alt="湖南弗斯迈项目现场实施" loading="lazy" data-lightbox="assets/企业MES系统/湖南弗斯迈出差-项目对接与实施02.jpg" />
+                    <img src="assets/企业MES系统/湖南弗斯迈出差-项目对接与实施02.webp" alt="湖南弗斯迈项目现场实施" loading="lazy" data-lightbox="assets/企业MES系统/湖南弗斯迈出差-项目对接与实施02.webp" />
                     <span class="carousel__caption">湖南弗斯迈 · 现场部署调试</span>
                   </li>
                   <li class="carousel__slide">
-                    <img src="assets/企业MES系统/实验室团队建设与颁奖-留影纪念.jpg" alt="实验室团队建设与颁奖留影" loading="lazy" data-lightbox="assets/企业MES系统/实验室团队建设与颁奖-留影纪念.jpg" />
+                    <img src="assets/企业MES系统/实验室团队建设与颁奖-留影纪念.webp" alt="实验室团队建设与颁奖留影" loading="lazy" data-lightbox="assets/企业MES系统/实验室团队建设与颁奖-留影纪念.webp" />
                     <span class="carousel__caption">智能计算与大数据实验室 · 团队留影</span>
                   </li>
                 </ul>
@@ -428,11 +437,11 @@
               <div class="carousel__viewport">
                 <ul class="carousel__track">
                   <li class="carousel__slide">
-                    <img src="assets/全景中山（springboot+vue）/01-登录门户.jpg" alt="全景中山平台登录门户" loading="lazy" data-lightbox="assets/全景中山（springboot+vue）/01-登录门户.jpg" />
+                    <img src="assets/全景中山（springboot+vue）/01-登录门户.webp" alt="全景中山平台登录门户" loading="lazy" data-lightbox="assets/全景中山（springboot+vue）/01-登录门户.webp" />
                     <span class="carousel__caption">登录门户 · 已部署上线</span>
                   </li>
                   <li class="carousel__slide">
-                    <img src="assets/全景中山（springboot+vue）/02-全景组件与点位映射.jpg" alt="全景图组件封装、点位标记与地图映射" loading="lazy" data-lightbox="assets/全景中山（springboot+vue）/02-全景组件与点位映射.jpg" />
+                    <img src="assets/全景中山（springboot+vue）/02-全景组件与点位映射.webp" alt="全景图组件封装、点位标记与地图映射" loading="lazy" data-lightbox="assets/全景中山（springboot+vue）/02-全景组件与点位映射.webp" />
                     <span class="carousel__caption">全景组件封装 · 点位标记与地图映射</span>
                   </li>
                 </ul>
@@ -466,11 +475,11 @@
               <div class="carousel__viewport">
                 <ul class="carousel__track">
                   <li class="carousel__slide">
-                    <img src="assets/掌上湖州（鸿蒙移动应用）/01-景点与美食.jpg" alt="掌上湖州景点与美食模块" loading="lazy" data-lightbox="assets/掌上湖州（鸿蒙移动应用）/01-景点与美食.jpg" />
+                    <img src="assets/掌上湖州（鸿蒙移动应用）/01-景点与美食.webp" alt="掌上湖州景点与美食模块" loading="lazy" data-lightbox="assets/掌上湖州（鸿蒙移动应用）/01-景点与美食.webp" />
                     <span class="carousel__caption">景点 / 美食 · 分类筛选与详情页</span>
                   </li>
                   <li class="carousel__slide">
-                    <img src="assets/掌上湖州（鸿蒙移动应用）/02-登录注册与首页.jpg" alt="掌上湖州登录注册与首页" loading="lazy" data-lightbox="assets/掌上湖州（鸿蒙移动应用）/02-登录注册与首页.jpg" />
+                    <img src="assets/掌上湖州（鸿蒙移动应用）/02-登录注册与首页.webp" alt="掌上湖州登录注册与首页" loading="lazy" data-lightbox="assets/掌上湖州（鸿蒙移动应用）/02-登录注册与首页.webp" />
                     <span class="carousel__caption">登录注册 · 表单校验与首页推荐</span>
                   </li>
                 </ul>
@@ -507,19 +516,19 @@
               <div class="carousel__viewport">
                 <ul class="carousel__track">
                   <li class="carousel__slide">
-                    <img src="assets/社区宠物管理系统/01-宠物地图.jpg" alt="宠物地图与区域规划" loading="lazy" data-lightbox="assets/社区宠物管理系统/01-宠物地图.jpg" />
+                    <img src="assets/社区宠物管理系统/01-宠物地图.webp" alt="宠物地图与区域规划" loading="lazy" data-lightbox="assets/社区宠物管理系统/01-宠物地图.webp" />
                     <span class="carousel__caption">宠物地图 · 点位聚合与区域规划</span>
                   </li>
                   <li class="carousel__slide">
-                    <img src="assets/社区宠物管理系统/02-宠物详情.jpg" alt="宠物详情基础信息与领养状态" loading="lazy" data-lightbox="assets/社区宠物管理系统/02-宠物详情.jpg" />
+                    <img src="assets/社区宠物管理系统/02-宠物详情.webp" alt="宠物详情基础信息与领养状态" loading="lazy" data-lightbox="assets/社区宠物管理系统/02-宠物详情.webp" />
                     <span class="carousel__caption">宠物详情 · 领养状态与上报入口</span>
                   </li>
                   <li class="carousel__slide">
-                    <img src="assets/社区宠物管理系统/03-活动轨迹.jpg" alt="宠物活动轨迹时间线" loading="lazy" data-lightbox="assets/社区宠物管理系统/03-活动轨迹.jpg" />
+                    <img src="assets/社区宠物管理系统/03-活动轨迹.webp" alt="宠物活动轨迹时间线" loading="lazy" data-lightbox="assets/社区宠物管理系统/03-活动轨迹.webp" />
                     <span class="carousel__caption">活动轨迹 · 走失与找到的事件时间线</span>
                   </li>
                   <li class="carousel__slide">
-                    <img src="assets/社区宠物管理系统/04-区域规划.jpg" alt="区域规划绘制与面积计算" loading="lazy" data-lightbox="assets/社区宠物管理系统/04-区域规划.jpg" />
+                    <img src="assets/社区宠物管理系统/04-区域规划.webp" alt="区域规划绘制与面积计算" loading="lazy" data-lightbox="assets/社区宠物管理系统/04-区域规划.webp" />
                     <span class="carousel__caption">区域规划 · 多边形绘制与面积自动计算</span>
                   </li>
                 </ul>
@@ -585,11 +594,11 @@
         <div class="intern-gallery">
           <h3 class="intern-gallery__title">实习留影 · 湖州芯洋科技</h3>
           <div class="intern-gallery__grid">
-            <figure class="intern-gallery__item" data-lightbox="assets/实习-湖州/大二暑期实习-01.jpg">
-              <img src="assets/实习-湖州/大二暑期实习-01.jpg" alt="湖州前端开发实习留影" loading="lazy" />
+            <figure class="intern-gallery__item" data-lightbox="assets/实习-湖州/大二暑期实习-01.webp">
+              <img src="assets/实习-湖州/大二暑期实习-01.webp" alt="湖州前端开发实习留影" loading="lazy" />
             </figure>
-            <figure class="intern-gallery__item" data-lightbox="assets/实习-湖州/大二暑期实习-02.jpg">
-              <img src="assets/实习-湖州/大二暑期实习-02.jpg" alt="湖州前端开发实习留影" loading="lazy" />
+            <figure class="intern-gallery__item" data-lightbox="assets/实习-湖州/大二暑期实习-02.webp">
+              <img src="assets/实习-湖州/大二暑期实习-02.webp" alt="湖州前端开发实习留影" loading="lazy" />
             </figure>
           </div>
         </div>
@@ -665,23 +674,23 @@
             <div class="carousel__viewport">
               <ul class="carousel__track">
                 <li class="carousel__slide">
-                  <img src="assets/比赛和领奖/珠港澳大湾区远光杯-比赛颁奖留影.jpg" alt="粤港澳大湾区远光杯比赛颁奖现场" loading="lazy" data-lightbox="assets/比赛和领奖/珠港澳大湾区远光杯-比赛颁奖留影.jpg" />
+                  <img src="assets/比赛和领奖/珠港澳大湾区远光杯-比赛颁奖留影.webp" alt="粤港澳大湾区远光杯比赛颁奖现场" loading="lazy" data-lightbox="assets/比赛和领奖/珠港澳大湾区远光杯-比赛颁奖留影.webp" />
                   <span class="carousel__caption">远光杯 · 比赛颁奖留影</span>
                 </li>
                 <li class="carousel__slide">
-                  <img src="assets/比赛和领奖/珠港澳大湾区远光杯-留影纪念.jpg" alt="粤港澳大湾区远光杯团队留影" loading="lazy" data-lightbox="assets/比赛和领奖/珠港澳大湾区远光杯-留影纪念.jpg" />
+                  <img src="assets/比赛和领奖/珠港澳大湾区远光杯-留影纪念.webp" alt="粤港澳大湾区远光杯团队留影" loading="lazy" data-lightbox="assets/比赛和领奖/珠港澳大湾区远光杯-留影纪念.webp" />
                   <span class="carousel__caption">远光杯 · 团队留影纪念</span>
                 </li>
                 <li class="carousel__slide">
-                  <img src="assets/比赛和领奖/优秀班长-领奖.jpg" alt="优秀班长领奖现场" loading="lazy" data-lightbox="assets/比赛和领奖/优秀班长-领奖.jpg" />
+                  <img src="assets/比赛和领奖/优秀班长-领奖.webp" alt="优秀班长领奖现场" loading="lazy" data-lightbox="assets/比赛和领奖/优秀班长-领奖.webp" />
                   <span class="carousel__caption">优秀班长 · 领奖现场</span>
                 </li>
                 <li class="carousel__slide">
-                  <img src="assets/比赛和领奖/优秀班集体答辩-01.jpg" alt="优秀班集体答辩现场" loading="lazy" data-lightbox="assets/比赛和领奖/优秀班集体答辩-01.jpg" />
+                  <img src="assets/比赛和领奖/优秀班集体答辩-01.webp" alt="优秀班集体答辩现场" loading="lazy" data-lightbox="assets/比赛和领奖/优秀班集体答辩-01.webp" />
                   <span class="carousel__caption">优秀班集体答辩 · 现场</span>
                 </li>
                 <li class="carousel__slide">
-                  <img src="assets/比赛和领奖/优秀班集体答辩-02.jpg" alt="优秀班集体答辩团队合影" loading="lazy" data-lightbox="assets/比赛和领奖/优秀班集体答辩-02.jpg" />
+                  <img src="assets/比赛和领奖/优秀班集体答辩-02.webp" alt="优秀班集体答辩团队合影" loading="lazy" data-lightbox="assets/比赛和领奖/优秀班集体答辩-02.webp" />
                   <span class="carousel__caption">优秀班集体答辩 · 团队合影</span>
                 </li>
               </ul>
@@ -715,56 +724,56 @@
 
         <div class="certs__grid" id="certs-grid">
           <!-- 竞赛证书 -->
-          <figure class="cert-card" data-category="contest" data-lightbox="assets/获奖证书/2025计算机设计大赛-广东省三等奖.jpg">
-            <img src="assets/获奖证书/2025计算机设计大赛-广东省三等奖.jpg" alt="中国大学生计算机设计大赛广东省三等奖证书" loading="lazy" />
+          <figure class="cert-card" data-category="contest" data-lightbox="assets/获奖证书/2025计算机设计大赛-广东省三等奖.webp">
+            <img src="assets/获奖证书/2025计算机设计大赛-广东省三等奖.webp" alt="中国大学生计算机设计大赛广东省三等奖证书" loading="lazy" />
             <figcaption class="cert-card__caption">
               <span class="cert-card__name">中国大学生计算机设计大赛</span>
               <span class="cert-card__prize">广东省三等奖 · 第二负责人</span>
             </figcaption>
           </figure>
 
-          <figure class="cert-card" data-category="contest" data-lightbox="assets/获奖证书/粤港澳大湾区远光杯-二等奖.jpg">
-            <img src="assets/获奖证书/粤港澳大湾区远光杯-二等奖.jpg" alt="粤港澳大湾区远光杯二等奖证书" loading="lazy" />
+          <figure class="cert-card" data-category="contest" data-lightbox="assets/获奖证书/粤港澳大湾区远光杯-二等奖.webp">
+            <img src="assets/获奖证书/粤港澳大湾区远光杯-二等奖.webp" alt="粤港澳大湾区远光杯二等奖证书" loading="lazy" />
             <figcaption class="cert-card__caption">
               <span class="cert-card__name">粤港澳大湾区「远光杯」</span>
               <span class="cert-card__prize">二等奖 · 项目组长</span>
             </figcaption>
           </figure>
 
-          <figure class="cert-card" data-category="contest" data-lightbox="assets/获奖证书/粤港澳大湾区远光杯-三等奖.jpg">
-            <img src="assets/获奖证书/粤港澳大湾区远光杯-三等奖.jpg" alt="粤港澳大湾区远光杯三等奖证书" loading="lazy" />
+          <figure class="cert-card" data-category="contest" data-lightbox="assets/获奖证书/粤港澳大湾区远光杯-三等奖.webp">
+            <img src="assets/获奖证书/粤港澳大湾区远光杯-三等奖.webp" alt="粤港澳大湾区远光杯三等奖证书" loading="lazy" />
             <figcaption class="cert-card__caption">
               <span class="cert-card__name">粤港澳大湾区「远光杯」</span>
               <span class="cert-card__prize">三等奖 · 项目组长</span>
             </figcaption>
           </figure>
 
-          <figure class="cert-card" data-category="contest" data-lightbox="assets/获奖证书/2025大学生创新大赛-校级铜奖.jpg">
-            <img src="assets/获奖证书/2025大学生创新大赛-校级铜奖.jpg" alt="大学生创新大赛校级铜奖证书" loading="lazy" />
+          <figure class="cert-card" data-category="contest" data-lightbox="assets/获奖证书/2025大学生创新大赛-校级铜奖.webp">
+            <img src="assets/获奖证书/2025大学生创新大赛-校级铜奖.webp" alt="大学生创新大赛校级铜奖证书" loading="lazy" />
             <figcaption class="cert-card__caption">
               <span class="cert-card__name">大学生创新大赛</span>
               <span class="cert-card__prize">校级铜奖 · 项目组长</span>
             </figcaption>
           </figure>
 
-          <figure class="cert-card" data-category="contest" data-lightbox="assets/获奖证书/2025大学生创新大赛-院级一等奖.jpg">
-            <img src="assets/获奖证书/2025大学生创新大赛-院级一等奖.jpg" alt="大学生创新大赛院级一等奖证书" loading="lazy" />
+          <figure class="cert-card" data-category="contest" data-lightbox="assets/获奖证书/2025大学生创新大赛-院级一等奖.webp">
+            <img src="assets/获奖证书/2025大学生创新大赛-院级一等奖.webp" alt="大学生创新大赛院级一等奖证书" loading="lazy" />
             <figcaption class="cert-card__caption">
               <span class="cert-card__name">大学生创新大赛</span>
               <span class="cert-card__prize">院级一等奖 · 项目组长</span>
             </figcaption>
           </figure>
 
-          <figure class="cert-card" data-category="contest" data-lightbox="assets/获奖证书/2025大学生创新训练计划-校级立项.jpg">
-            <img src="assets/获奖证书/2025大学生创新训练计划-校级立项.jpg" alt="大学生创新训练计划校级立项证书" loading="lazy" />
+          <figure class="cert-card" data-category="contest" data-lightbox="assets/获奖证书/2025大学生创新训练计划-校级立项.webp">
+            <img src="assets/获奖证书/2025大学生创新训练计划-校级立项.webp" alt="大学生创新训练计划校级立项证书" loading="lazy" />
             <figcaption class="cert-card__caption">
               <span class="cert-card__name">大学生创新训练计划</span>
               <span class="cert-card__prize">校级立项 · 第二负责人</span>
             </figcaption>
           </figure>
 
-          <figure class="cert-card" data-category="contest" data-lightbox="assets/获奖证书/2025海峡两岸广东省大学生创新作品赛-优秀奖.jpg">
-            <img src="assets/获奖证书/2025海峡两岸广东省大学生创新作品赛-优秀奖.jpg" alt="海峡两岸广东省大学生创新作品赛优秀奖证书" loading="lazy" />
+          <figure class="cert-card" data-category="contest" data-lightbox="assets/获奖证书/2025海峡两岸广东省大学生创新作品赛-优秀奖.webp">
+            <img src="assets/获奖证书/2025海峡两岸广东省大学生创新作品赛-优秀奖.webp" alt="海峡两岸广东省大学生创新作品赛优秀奖证书" loading="lazy" />
             <figcaption class="cert-card__caption">
               <span class="cert-card__name">海峡两岸广东省大学生创新作品赛</span>
               <span class="cert-card__prize">优秀奖 · 第二负责人</span>
@@ -772,16 +781,16 @@
           </figure>
 
           <!-- 奖学金 -->
-          <figure class="cert-card" data-category="study" data-lightbox="assets/获奖证书/大一-二等奖学金.jpg">
-            <img src="assets/获奖证书/大一-二等奖学金.jpg" alt="大一二等奖学金证书" loading="lazy" />
+          <figure class="cert-card" data-category="study" data-lightbox="assets/获奖证书/大一-二等奖学金.webp">
+            <img src="assets/获奖证书/大一-二等奖学金.webp" alt="大一二等奖学金证书" loading="lazy" />
             <figcaption class="cert-card__caption">
               <span class="cert-card__name">校级奖学金（大一）</span>
               <span class="cert-card__prize">二等奖学金</span>
             </figcaption>
           </figure>
 
-          <figure class="cert-card" data-category="study" data-lightbox="assets/获奖证书/大二-二等奖学金.jpg">
-            <img src="assets/获奖证书/大二-二等奖学金.jpg" alt="大二二等奖学金证书" loading="lazy" />
+          <figure class="cert-card" data-category="study" data-lightbox="assets/获奖证书/大二-二等奖学金.webp">
+            <img src="assets/获奖证书/大二-二等奖学金.webp" alt="大二二等奖学金证书" loading="lazy" />
             <figcaption class="cert-card__caption">
               <span class="cert-card__name">校级奖学金（大二）</span>
               <span class="cert-card__prize">二等奖学金</span>
@@ -789,56 +798,56 @@
           </figure>
 
           <!-- 在校荣誉 -->
-          <figure class="cert-card" data-category="honor" data-lightbox="assets/获奖证书/大一-优秀班长.jpg">
-            <img src="assets/获奖证书/大一-优秀班长.jpg" alt="大一优秀班长证书" loading="lazy" />
+          <figure class="cert-card" data-category="honor" data-lightbox="assets/获奖证书/大一-优秀班长.webp">
+            <img src="assets/获奖证书/大一-优秀班长.webp" alt="大一优秀班长证书" loading="lazy" />
             <figcaption class="cert-card__caption">
               <span class="cert-card__name">优秀班长</span>
               <span class="cert-card__prize">大一 · 连续三年获评</span>
             </figcaption>
           </figure>
 
-          <figure class="cert-card" data-category="honor" data-lightbox="assets/获奖证书/大二-优秀班长.jpg">
-            <img src="assets/获奖证书/大二-优秀班长.jpg" alt="大二优秀班长证书" loading="lazy" />
+          <figure class="cert-card" data-category="honor" data-lightbox="assets/获奖证书/大二-优秀班长.webp">
+            <img src="assets/获奖证书/大二-优秀班长.webp" alt="大二优秀班长证书" loading="lazy" />
             <figcaption class="cert-card__caption">
               <span class="cert-card__name">优秀班长</span>
               <span class="cert-card__prize">大二 · 连续三年获评</span>
             </figcaption>
           </figure>
 
-          <figure class="cert-card" data-category="honor" data-lightbox="assets/获奖证书/大一-优秀学生骨干.jpg">
-            <img src="assets/获奖证书/大一-优秀学生骨干.jpg" alt="优秀学生骨干证书" loading="lazy" />
+          <figure class="cert-card" data-category="honor" data-lightbox="assets/获奖证书/大一-优秀学生骨干.webp">
+            <img src="assets/获奖证书/大一-优秀学生骨干.webp" alt="优秀学生骨干证书" loading="lazy" />
             <figcaption class="cert-card__caption">
               <span class="cert-card__name">优秀学生骨干</span>
               <span class="cert-card__prize">大一</span>
             </figcaption>
           </figure>
 
-          <figure class="cert-card" data-category="honor" data-lightbox="assets/获奖证书/大二-优秀共青团员.jpg">
-            <img src="assets/获奖证书/大二-优秀共青团员.jpg" alt="优秀共青团员证书" loading="lazy" />
+          <figure class="cert-card" data-category="honor" data-lightbox="assets/获奖证书/大二-优秀共青团员.webp">
+            <img src="assets/获奖证书/大二-优秀共青团员.webp" alt="优秀共青团员证书" loading="lazy" />
             <figcaption class="cert-card__caption">
               <span class="cert-card__name">优秀共青团员</span>
               <span class="cert-card__prize">大二</span>
             </figcaption>
           </figure>
 
-          <figure class="cert-card" data-category="honor" data-lightbox="assets/获奖证书/大二-优秀四级帮扶.jpg">
-            <img src="assets/获奖证书/大二-优秀四级帮扶.jpg" alt="优秀四级帮扶证书" loading="lazy" />
+          <figure class="cert-card" data-category="honor" data-lightbox="assets/获奖证书/大二-优秀四级帮扶.webp">
+            <img src="assets/获奖证书/大二-优秀四级帮扶.webp" alt="优秀四级帮扶证书" loading="lazy" />
             <figcaption class="cert-card__caption">
               <span class="cert-card__name">优秀四级帮扶</span>
               <span class="cert-card__prize">大二</span>
             </figcaption>
           </figure>
 
-          <figure class="cert-card" data-category="honor" data-lightbox="assets/获奖证书/新生辩论赛-最佳辩手.jpg">
-            <img src="assets/获奖证书/新生辩论赛-最佳辩手.jpg" alt="新生辩论赛最佳辩手证书" loading="lazy" />
+          <figure class="cert-card" data-category="honor" data-lightbox="assets/获奖证书/新生辩论赛-最佳辩手.webp">
+            <img src="assets/获奖证书/新生辩论赛-最佳辩手.webp" alt="新生辩论赛最佳辩手证书" loading="lazy" />
             <figcaption class="cert-card__caption">
               <span class="cert-card__name">新生辩论赛「最佳辩手」</span>
               <span class="cert-card__prize">带领班级进入四强</span>
             </figcaption>
           </figure>
 
-          <figure class="cert-card" data-category="honor" data-lightbox="assets/获奖证书/2024实验室P2助理工程师晋升.jpg">
-            <img src="assets/获奖证书/2024实验室P2助理工程师晋升.jpg" alt="实验室 P2 助理工程师晋升认定" loading="lazy" />
+          <figure class="cert-card" data-category="honor" data-lightbox="assets/获奖证书/2024实验室P2助理工程师晋升.webp">
+            <img src="assets/获奖证书/2024实验室P2助理工程师晋升.webp" alt="实验室 P2 助理工程师晋升认定" loading="lazy" />
             <figcaption class="cert-card__caption">
               <span class="cert-card__name">实验室 P2 助理工程师</span>
               <span class="cert-card__prize">晋升认定 · 2024</span>
